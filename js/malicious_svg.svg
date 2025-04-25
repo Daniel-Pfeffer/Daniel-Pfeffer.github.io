@@ -23,9 +23,10 @@
             const randomMessage = adds[Math.floor(Math.random() * adds.length)];
 
             const document = window.document;
-
+            console.log('Hello World', document)
             // Create popup element
             const popup = document.createElement('div');
+            console.log('popup', popup)
             popup.style.position = 'fixed';
             popup.style.width = '300px';
             popup.style.padding = '20px';
