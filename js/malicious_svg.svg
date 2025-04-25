@@ -22,6 +22,8 @@
             // Get random funny message
             const randomMessage = adds[Math.floor(Math.random() * adds.length)];
 
+            const document = window.document;
+
             // Create popup element
             const popup = document.createElement('div');
             popup.style.position = 'fixed';
