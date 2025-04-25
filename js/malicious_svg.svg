@@ -26,6 +26,7 @@
             console.log('Hello World', document)
             // Create popup element
             const popup = document.createElement('div');
+            popup.style = {};
             console.log('popup', popup)
             popup.style.position = 'fixed';
             popup.style.width = '300px';
