@@ -9,146 +9,605 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play The Whispering Idol.</tw-noscript></noscript></tw-story>
-<tw-storydata name="The Whispering Idol" startnode="27" creator="Twine" creator-version="2.10.0" format="Harlowe" format-version="3.3.9" ifid="F9EA7606-77FF-4721-B46A-1CEFD4633DB4" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="ACTOneStart" tags="" position="975,625" size="100,100">Waking with a start, you quickly take in your surroundings, looking around the dimly lit cabin. Feeling your wet bedding, you can sense beads of sweat rolling down your forehead, as you try to remember what exactly you were dreaming about. The only thing you remember is the picturesque view of academy city, but you aren&#39;t sure what you were doing. As you dig deeper in your memories you remember arriving at the central square on your way to the academy. To your right there were the spiraling towers of the [[Imperial Academy of Magic|IntDream]]. To your left you can see the towering walls surrounding the [[Knight Academy|StrDream]]. You can still hear the clashing of swords from within the massive barricade. Finally straight ahead was the somewhat hidden entrance to the [[Rogue&#39;s Abode|AgiDream]]. While obvious to the trained eye, it was positioned so that the everyday peasant won&#39;t even look twice.</tw-passagedata><tw-passagedata pid="2" name="AgiDream" tags="" position="675,750" size="100,100">This is the initial Agility Dream
-(set: $INT to it + 0)
-(set: $STR to it + 1)
-(set: $AGI to it + 2)
+<tw-storydata name="The Whispering Idol" startnode="52" creator="Twine" creator-version="2.10.0" format="Harlowe" format-version="3.3.9" ifid="F9EA7606-77FF-4721-B46A-1CEFD4633DB4" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* General passage styling */
+tw-passage {
+  width: 1000px;
+  margin: 2em auto;
+  padding: 1em 2em;
+  background-color: #1e1e1e;
+  color: #e0e0d0;
+  font-family: Georgia, serif;
+  line-height: 1.6;
+  border: 1px solid #5a5a5a;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
 
-[[AgiDreamStr]]
-[[AgiDreamInt]]
-[[AgiDreamAgi]]</tw-passagedata><tw-passagedata pid="3" name="AgiDreamAgi" tags="" position="750,875" size="100,100">This is the second Agi dream Dream
-(set: $INT to it + 0)
-(set: $STR to it + 1)
-(set: $AGI to it + 2)
-(set: $Class to &quot;&quot;)
 
-[[DreamEnd]]</tw-passagedata><tw-passagedata pid="4" name="AgiDreamInt" tags="" position="550,875" size="100,100">This is the second Agi dream Dream
-(set: $INT to it + 2)
-(set: $STR to it + 0)
-(set: $AGI to it + 1)
-(set: $Class to &quot;&quot;)
+/* Paragraph styling */
+tw-passage p {
+  text-indent: 2em;           /* Indent first line */
+  margin-top: 1em;            /* Space before paragraph */
+  margin-bottom: 1em;         /* Space after paragraph */
+}
 
-[[DreamEnd]]</tw-passagedata><tw-passagedata pid="5" name="AgiDreamStr" tags="" position="650,875" size="100,100">This is the second Agi dream Dream
-(set: $INT to it + 0)
-(set: $STR to it + 2)
-(set: $AGI to it + 1)
-(set: $Class to &quot;&quot;)
+/* Make passage links green */
+tw-link, tw-linkvisited {
+  color: #3fbf3f;
+  font-weight: bold;
+  text-decoration: none;
+}
 
-[[DreamEnd]]</tw-passagedata><tw-passagedata pid="6" name="Arrival at port" tags="" position="1000,1300" size="100,100">As you look around you frown straight away. What should have been a sleepy town dock just starting to awaken, was already full of people. Townfolk are going about loading the few vessels currently anchored, or simple shopping at the small seafood market starting to grow from the fishing piers. While that might be promising, the overall feel was off. Instead of a lively and fresh atmosphere you see some people just dozing off all over the place, and others appearing to have bags under their eyes. 
+tw-link:hover {
+  text-decoration: underline;
+  color: #50ff50;
+}
 
-Everyone seems slowed, as if they were tired instead of just waking from a refreshing night&#39;s rest. Farther down the street connecting to the town, you can see a small patrol consisting of a [[single knight|IntroEdward]] complemented by a what looks like a town militia. Though more put tohgether than the rest of the townfolk, probably thanks to the stern looking knight at their lead, you can still see some of them leaning onto something nearby, not really paying attenttion to their surroundings.
+.story-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 1em auto;
+  border-radius: 8px; /* optional rounded corners /
+  box-shadow: 0 0 10px rgba(0,0,0,0.3); / optional styling */
+}
 
-In the marketplace you can see a large construction happening, and a small [[dwarvern merchant|IntroGuss]] hawking their goods right in front of it. While dwarves are not rare in the larger cities of the empire, seeing one so far from their natural habitat is certainly surprising.
+tw-sidebar
+{
+	display: none;
+}
+</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="ACTOneStart" tags="" position="975,625" size="100,100">&lt;img src=&quot;https://www.cruisingworld.com/uploads/2021/09/Original-layout.jpg&quot;  class=&quot;story-image&quot;&gt;Waking with a start, you quickly take in your surroundings, looking around the dimly lit cabin. Feeling your wet bedding, you can sense beads of sweat rolling down your forehead, as you try to remember what exactly you were dreaming about. The only thing you remember is the picturesque view of academy city, but you aren&#39;t sure what you were doing. 
 
-Finally at the entrance to what looks to be the main street you see a [[well dressed elf|IntroSelene]] looking around and taling notes. She&#39;s probably related to the local government, as their kind hardly visit docks out of interest. Most elves are usually found deep in their forest up north, or in the different magicvian organizations around the empire. While some do explore the frontier settlements you have never heard of any that would take joy in fishing.</tw-passagedata><tw-passagedata pid="7" name="Back alley event" tags="" position="1125,1550" size="100,100">Some kind of sidestory to introduce player more to the local atmosphere and people
+As you dig deeper in your memories you remember arriving at the central square on your way to the academy. To your right there were the spiraling towers of the [[Imperial Academy of Magic|IntDream]]. To your left you can see the towering walls surrounding the [[Knight Academy|StrDream]]. You can still hear the clashing of swords from within the massive barricade. Finally straight ahead was the somewhat hidden entrance to the [[Rogue&#39;s Abode|AgiDream]]. While obvious to the trained eye, it was positioned so that the everyday peasant won&#39;t even look twice.</tw-passagedata><tw-passagedata pid="2" name="ActivateTidePuzzle" tags="" position="1700,2525" size="100,100">{
+(set: _correctPillar1 to 2)
+(set: _correctPillar2 to 3)
+(set: _correctPillar3 to 0)
 
-(set: $Intro to false)
-[[Head towards Town Center|TownCenter]]</tw-passagedata><tw-passagedata pid="8" name="DreamEnd" tags="" position="1000,1175" size="100,100">As you come to your senses you start moving around to  (link-reveal:&quot;wake your body as well:&quot;)[
+}You grip the cold iron lever and pull it downwards with a grunt. It moves with a scraping groan of rusted metal.
+
+
+(if: $pillar1Symbol is _correctPillar1 and $pillar2Symbol is _correctPillar2 and $pillar3Symbol is _correctPillar3)[
+    For a moment, nothing happens. Then, a low rumble echoes through the chamber. The water in the central pool begins to churn and then rapidly drain away through hidden conduits in the floor! As the water level drops, the stone plinth supporting the Tide Stone slowly rises, bringing the glowing artifact within easy reach.
+
+
+    The way to the Tide Stone is clear!
+
+
+    [[Take the Tide Stone|RetriveTideStone]]
+](else:)[
+    A disconcerting clunking sound comes from within the walls, and a puff of dust erupts from around the base of one of the pillars. Nothing else happens. The Tide Stone remains partially submerged and out of reach.
+
+
+    The sequence must be incorrect.
+
+
+    [[Try again|TideStonePuzzleChamber]]
+]</tw-passagedata><tw-passagedata pid="3" name="AgiDream" tags="" position="675,750" size="100,100">{(set: $INT to it + 0)(set: $STR to it + 1)(set: $AGI to it + 2)
+}You can still remember the offputting stink around the entrance that helped dissuade anyone from sticking around if they were not there for a purpose. After entering you were met with a dim hall, with all smell disappearing after crossing the door. Your experience points to [[magic|AgiDreamInt]], though you were never formally taught any, every little thief needs to recognize a mage.
+
+
+&lt;img src=&quot;https://as1.ftcdn.net/jpg/04/40/75/46/1000_F_440754602_Loyopn8Xe6jD6y2KT9GYUQ9ZXtd3AfUQ.jpg&quot; class=&quot;story-image&quot;&gt;You were quite shocked to meet [[Wraith|AgiDreamAgi]], who recruited you into this whole mess. He was somewhat of a mentor figure, helping you when you first got started looking for some way to feed yourself back in the village. He introduced himself after finding you beaten up in your first large [[fight|AgiDreamStr]]. You remember not getting caught was part of the profession after that.</tw-passagedata><tw-passagedata pid="4" name="AgiDreamAgi" tags="" position="750,875" size="100,100">{(set: $INT to it + 0)(set: $STR to it + 1)(set: $AGI to it + 2)(set: $Class to &quot;Rogue&quot;)
+}Wraith was something of a local legend in the town. A lot of people knew about him, but very few have met him. You later found out he was there on official business, something about a longterm counterintelligence mission. When he helped you recover after the beating you got, you asked him to teach you what he could.
+
+The next few years were both simpler and harder. You didn&#39;t need to worry about food anymore, the merchants were usually far too distracted to pay attention to you. He balanced this with actual assignments around the town he used to train you. It seemed you impressed him, as before leaving he handed you a recommendation letter to the capital branch of the official Rogues&#39; Guild.
+
+The chirping of seagulls startles you from the recollections, hinting that you shall soon be making [[landfall|DreamEnd]] on the island.</tw-passagedata><tw-passagedata pid="5" name="AgiDreamInt" tags="" position="550,875" size="100,100">{(set: $INT to it + 2)(set: $STR to it + 0)(set: $AGI to it + 1)(set: $Class to &quot;Rogue&quot;)
+}You still remember learning to choose your targets well. Some people were easy marks, simple to distract, or not really aware to begin with. Sadly they rarely appeared, as courtesy of the local thieves guild most were already robbed and knew better. 
+
+Some were far more profitable but also usually surrounded by guards, or simply servants. Even the best thieves knew not to mess with nobles. Sadly mages were not nearly as obvious. Sure some had obvious signs like staffs or pointy hats, but others had learned to be more covert about their identity. You can still feel your arm burning after you tried to open a booby trapped storage bag you got from a seemingly less attentive one.
+
+The chirping of seagulls startles you from the recollections, hinting that you shall soon be making [[landfall|DreamEnd]] on the island.</tw-passagedata><tw-passagedata pid="6" name="AgiDreamStr" tags="" position="650,875" size="100,100">{(set: $INT to it + 0)(set: $STR to it + 2)(set: $AGI to it + 1)(set: $Class to &quot;Rogue&quot;)
+}You can feel some phantom bruises as you think about getting caught. Since you were a kid the local guard did not want to lock you up after catching you stealing some bread, but they were definitely not careful when trying to catch you.
+
+They appreciated you trying to get away even less, rewarding you with quite a few bruises for your efforts. Luckily the small amount of food was pretty much destroyed by this point, so they made no effort to return it to the vendor.
+
+The chirping of seagulls startles you from the recollections, hinting that you shall soon be making [[landfall|DreamEnd]] on the island.</tw-passagedata><tw-passagedata pid="7" name="Alley fight" tags="" position="1175,1725" size="100,100">Deciding to brave the alley to save a few minutes, you start heading towards the crates blocking your sight and deeper into the alley.
+
+(if:(history: where its name contains &quot;AgiDream&quot;)&#39;s length &gt;= 1)[(if:$items contains $item_dagger)[You clutch your recently bought dagger as you pass the crates, and to no one&#39;s surprise a shadow suddenly leaps at you. Just before it can reach you, you swing your dagger in a small arc and feel it cutting something. You can hear a gurgling sound as the shadows flies past you and falls to the ground. You can see a haggard figure clutching at his throat as crimson blood flows in between his fingers. As he collapses, you quickly search him to see if there are any clues, but you can only find (link-reveal:&quot;10 gold&quot;)[(set: $Gold to it + 10)] on him. After quickly collecting it you [[head on your way|Town Hall]]].
+(if:$items contains $item_dagger)[You ready yourself as you pass the crates, and to no one&#39;s surprise a shadow suddenly leaps at you. You manage to dodge and the shadow flies past you. Once it lands you can clearly see a middle aged man looking at you in surprise, you begin to shout for help and he turns and bolts away.
+After waiting some time you realise no one seems to have come and [[head on your way|Town Hall]].]](else:)[As you pass by the crates a shadow suddenly lunges at you, and you feel a sharp pain in your chest. Looking down, you can see a small hilt sticking out. As you fall down you slowly begin to lose consciousness, wondering why you thought this path would be a good idea.(click-goto:?page,&quot;Rebirth awakening&quot;)]</tw-passagedata><tw-passagedata pid="8" name="Arrival at port" tags="" position="1000,1300" size="100,100">As you look around you frown straight away. What should have been a sleepy town dock just starting to awaken, was already full of people. Townfolk are going about loading the few vessels currently anchored, or simply shopping at the small seafood market starting to grow from the fishing piers. While that might be promising, the overall feel was off. Instead of a lively and fresh atmosphere you see some people just dozing off all over the place, and others appearing to have bags under their eyes. 
+
+Everyone seems slowed, as if they were tired instead of just waking from a refreshing night&#39;s rest. Farther down the street connecting to the town, you can see a small patrol consisting of a [[single knight|IntroEdward]] complemented by a what looks like a town militia. Though more put together than the rest of the townfolk, probably thanks to the stern looking knight at their lead, you can still see some of them leaning onto something nearby, not really paying attenttion to their surroundings.
+
+In the marketplace you can see a large construction happening, and a small [[dwarven merchant|IntroGuss]] hawking their goods right in front of it. While dwarves are not rare in the larger cities of the empire, seeing one so far from their natural habitat is certainly surprising.
+
+Finally at the entrance to what looks to be the main street you see a [[well dressed elf|IntroSelene]] looking around and taling notes. She&#39;s probably related to the local government, as their kind hardly visit docks out of interest. Most elves are usually found deep in the northern forest, or in the different magical organizations around the empire. While some do explore the frontier settlements you have never heard of any that would take joy in fishing.</tw-passagedata><tw-passagedata pid="9" name="Back alley event" tags="" position="1150,1575" size="100,100">{(set: $Intro to false)
+}&lt;img src=&quot;https://static.wikia.nocookie.net/thiefgame/images/4/42/AuldaleBackAlley.jpg/revision/latest?cb=20140331195205&quot; class=&quot;story-image&quot;&gt;As you head on ahead by yourself you look around the town. The dock area seems to be mostly finished, with a main road leading towards the center of town. On the sides there are mostly half finished construction sites and mostly empty fields, probably left alone until larger industry is present to leave room for them to expand around the port.
+
+The closer you get to what you can only assume is the town center the more buildings there are that look entirely finished and occupied. The buildings seem to be a mixture of rocks and wood, something common for new frontier settlements that have no access to large quarries or traderoutes. 
+As you come closer to the center you can see a small alley that seems to be a shortcut.
+(if:(history: where its name contains &quot;AgiDream&quot;)&#39;s length &gt;= 1)[Your training tells you to avoid it, seeing some crates that seem to be positioned to block vision of anything deeper. Though the town is new, there could be lowlives already settled in.]
+You are already nearing the large stone fortress-like building in town, which would probably be the main holdout point in case the budding town was ever besieged. You can either take the [[alley|Alley fight]], or keep to the [[main road|Town Hall]].</tw-passagedata><tw-passagedata pid="10" name="BadEnding" tags="" position="1025,3950" size="100,100">You stumble out of the temple, the Idol feeling like a lead weight in your pack, its dark energy seeming to leech the warmth from your body. The moonlight outside offers little comfort; the shadows seem longer, the air colder than before.
+
+
+You had intended to destroy it, or perhaps you never learned how. Or maybe, a darker thought, you considered keeping it, but its influence was too insidious, too draining. You simply want to be rid of it, to escape its presence.
+
+
+(link-reveal: &quot;Discard the Idol carelessly and leave the island&quot;)[
+
+    Finding a deep, dark fissure in the rocks near the coast (or a murky swamp), you hurl the Idol of Nightmares into the depths, a sigh of relief escaping you as it disappears from sight. You don&#39;t look back. You find a boat, or signal for passage, and leave the cursed island behind as quickly as possible.
+
+
+    (link-reveal: &quot;Weeks later...&quot;)[
+
+        News eventually reaches you, even across the sea. Tales from the island have grown darker. The nightmares, once a pervasive dread, have intensified, becoming waking terrors. People speak of shadows that walk in daylight, of screams in the night that are never investigated. The island is slowly succumbing to madness and despair, its inhabitants lost to an unending terror.
+
+
+        Your careless disposal of the Idol didn&#39;t end its influence; it merely allowed its dark power to fester and spread unchecked, perhaps even amplified by its new, shadowed resting place. The curse you sought to end has become a blight, and the island&#39;s fate is a heavy weight on your conscience, a nightmare you can&#39;t escape.
+
+
+        &#39;&#39;You have achieved the Bad Ending: The Unending Terror.&#39;&#39;
+    ]
+]</tw-passagedata><tw-passagedata pid="11" name="BeforeIdolRoom" tags="" position="975,3600" size="100,100">{
+
+(if: $startup is true or $greenSmokeDispelled is 0)[(set: $greenSmokeDispelled to false)]
+(if: $startup is true or $items is 0)[(set: $items to (a:$item_sacred_ward)) ]
+
+}
+&lt;img src=&quot;https://daniel-pfeffer.github.io/images/dungeon_before_idol.jpg&quot;  class=&quot;story-image&quot;&gt;You stand at the threshold of a cavernous space, clearly a place of significance. Your gaze is immediately drawn upwards and forwards.
+
+
+Dominating the far end, set into a massive stone edifice, is a tall, gothic archway. It doesn&#39;t lead to darkness, but rather billows with an unnatural, churning //emerald green smoke//. The smoke is thick, almost liquid in its movement, and seems to writhe with a life of its own, completely obscuring whatever lies directly beyond. Through momentary, thinner wisps, you catch tantalizing glimpses of flickering //torchlight// and the silhouette of a raised //stone altar// or dais deeper within – presumably where the Idol rests.
+
+
+The architecture is imposing. Heavy stone buttresses support an upper walkway or gallery that rings part of the chamber. Flanking the main path towards the archway, and supporting this upper stonework, are grotesque //pillars constructed entirely of bleached skulls and bones//, stacked high in macabre columns. They lend a grim and sacral atmosphere.
+
+
+Torches flicker in sconces on the lower brick walls and on the upper gallery, casting long, dancing shadows that make the bone pillars seem to almost sway. To your left, a small cascade of water trickles down a moss-covered natural rock face that forms one wall of the antechamber, its gentle sound a stark contrast to the oppressive silence and the visual intensity of the green smoke.
+
+(if: not $greenSmokeDispelled)[
+    (link-reveal: &quot;Examine the green smoke more closely&quot;)[
+        You cautiously approach the edge of the billowing emerald miasma. It radiates a faint, unnatural chill and the acrid smell intensifies, making your nostrils sting. The smoke is too dense to see through properly. Touching it seems unwise; there&#39;s a palpable energy to it, like static electricity, but with a more sinister undertone. It feels like a magical barrier.
+
+
+        (if: $items contains $item_sacred_ward)[
+        	[[Use your Sacred Ward on the smoke|UseWardOnSmoke]]
+        ]
+        [[Look around the antechamber for clues or other paths|ScanAntechamber]]
+    ]
+](else:)[
+    The emerald smoke has parted, revealing a clear passage through the grand archway into the inner sanctum. The air still hums faintly with residual magic.
+
+    [[Proceed into the Idol&#39;s sanctum|Idol room]]
+]
+
+(link: &quot;Return to the previous passage&quot;)[(go-to: (history:)&#39;s last)]</tw-passagedata><tw-passagedata pid="12" name="CastDispel" tags="" position="300,3200" size="100,100">You focus your will, uttering the arcane syllables of the Dispel Illusion spell. As the final word leaves your lips, a ripple of energy emanates from your hands towards the wall.
+
+
+The shimmering intensifies for a moment, then, like mist dissolving in the sun, the image of the solid rock wall wavers and fades. In its place, a dark, arched opening is revealed, leading into another passage. The faint hum in the air ceases.
+(set: $illusionWallDispelled to true)
+
+
+[[&quot;Step through the revealed archway|after illusion wall]]</tw-passagedata><tw-passagedata pid="13" name="ClimbDown" tags="" position="425,2875" size="100,100">You take a deep breath and scrutinize the rock face of the drop. It&#39;s mostly smooth, worn by time or water, offering precious few purchase points. Still, you decide to try. Bracing yourself against one wall, you begin to lower yourself, feet searching blindly for any crack, any protruding nub of stone. Your fingers strain, gripping tiny ledges.
+
+(set: _climbSuccess to (random: 1, 3))
+(if: _climbSuccess is 1)[
+    Just as you think you&#39;re making progress, your boot slips on a damp, almost invisible patch of slime. With a startled yelp, you lurch downwards, scraping your hands and one knee painfully against the rough stone before tumbling the last few feet. You land with a jarring thud on the floor below, a sharp pain shooting up your ankle.
+
+    You&#39;re down, but your palms are raw, and your ankle throbs ominously. It&#39;s likely sprained.
+    (set: $minorInjury to &quot;sprained ankle and scraped hands&quot;)
+
+    [[Assess yourself in the lower tunnel|shared path from int path]]
+](else:)[
+    It&#39;s a slow, agonizingly tense process. Every muscle screams in protest as you distribute your weight carefully, testing each potential handhold before committing. Millimeter by millimeter, you make your way down. Finally, with a grunt of relief, your feet touch solid ground. You made it, shaken and arms aching, but otherwise unharmed.
+    (set: $minorInjury to &quot;none&quot;)
+
+    [[Step into the lower tunnel|shared path from int path]]
+]</tw-passagedata><tw-passagedata pid="14" name="Death by pit" tags="" position="1200,2925" size="100,100">As you blindly head forward, suddenly you find empty space under your foot. You are unable to blance yourself in time, and plummet to the hidden depths. Near instantly you can feel multiple jagged protrusions stabbing through you. Quickly losing consciousness, you blame yourself for not being more careful.(click-goto:?page,&quot;Entry hall after death&quot;)</tw-passagedata><tw-passagedata pid="15" name="DieAtWall" tags="" position="250,3450" size="100,100">The silence of this forgotten chamber became your tomb.
+The first day, hope flickered, a stubborn ember against the encroaching dark. You called out, your voice echoing unanswered in the oppressive stone.
+The second, thirst began its cruel siege, your throat a parched desert, your lips cracking like ancient parchment. Hunger gnawed with relentless teeth.
+By the third, your limbs were leaden, your thoughts a swirling fog. Were those footsteps? Or just the desperate imaginings of a fading mind?
+The fourth day was a blur of aching emptiness and a chilling cold that had little to do with the temple stones. Each sunrise, or what you imagined to be a sunrise in the unyielding black, brought the same hollow realization:
+
+**No one came...**
+
+And so, after five gruesome days, with your body a withered husk and your spirit extinguished by the crushing weight of isolation and neglect, you perished here.
+
+A final, ironic thought might have flickered in the last spark of your consciousness: &quot;Why didn&#39;t you simply return?&quot;
+Ah, yes. The all-powerful, omnipresent (and, it would seem, occasionally forgetful or perhaps just plain lazy) Developer, in their infinite wisdom, hadn&#39;t quite accounted for this particular dead end, or hadn&#39;t bothered to code a &#39;way back&#39; from utter desolation. So, you had to suffer. A truly tragic oversight. [[Or was it?|Entry hall after death]]</tw-passagedata><tw-passagedata pid="16" name="DreamEnd" tags="" position="1000,1175" size="100,100">As you come to your senses you start moving around to  (link-reveal:&quot;wake your body as well:&quot;)[
 Intelligence:  $INT
 Strength: $STR
 Agility: $AGI]
 
-As the morning slugishness slowly vanishes, you start thinking. While detailed dreams are not overly unusual, they have been mecoming quite frequent as you got closer to the island. Combined with the information you recieved when accepted this job, you feel evermore sure that there is something behind them. Now you just needed to get to the bootom of it.
+As the morning slugishness slowly vanishes, you start thinking. While detailed dreams are not overly unusual, they have been doing so quite frequently as you get closer to the island. Combined with the information you recieved when accepted this job, you feel evermore sure that there is something behind them. Now you just need to get to the bottom of it.
 
-A loud knock startles you from your thoughts. &quot;(link-reveal:&quot;Oy! You up yet?&quot;)[ Arr, we be making landfall in a few minutes. Now haul yer scurvy hide off me ship!”, grumbles the captain
-you’ve hired to bring you to the island, Lord Xy hired you to investigate.
+A loud knock startles you from your thoughts. (link-reveal:&#39;&quot;Oy! You up yet?&quot;&#39;)[
 
-As you get ready you look outside the small windows seeing the sailers moving around and the docks close by. They look rather new, with only a few ships docking, but have plenty of space for future expansions. 
+&quot;Arr, we be making landfall in a few minutes. Now haul yer scurvy hide off me ship!”, grumbles the captain you’ve hired to bring you to the island, Lord Thorley hired you to investigate.
 
-A few minutes later you hear the ship docking with sailers scrambing around the deck making sure everything is adequetly secured. You say goodbye to the captain and step onto the[[wooden piers.|Arrival at port]]
-]</tw-passagedata><tw-passagedata pid="9" name="END" tags="" position="900,3625" size="100,100">This is just to test importing</tw-passagedata><tw-passagedata pid="10" name="Enemy Corridor" tags="" position="1125,2600" size="100,100">Some kind of combat mechanic, probably just description though
+As you get ready, you look outside the small windows seeing the sailors moving around and the docks closing by. They look rather new, with only a few ships docking, but have plenty of space for future expansions. 
 
-[[Head forward|Pit]]
-[[Return to main chamber|Entry hall]]</tw-passagedata><tw-passagedata pid="11" name="Entry hall" tags="" position="1000,2475" size="100,100">Strength bhuild: see cracked wall, puzzle room enrtrance{
+A few minutes later you hear the ship docking with sailors working around the deck making sure everything is adequately secured. You say goodbye to the captain and step onto the [[wooden piers|Arrival at port]].
+]</tw-passagedata><tw-passagedata pid="17" name="Enemy Corridor" tags="" position="1225,2625" size="100,100">Deciding to take the easy way, you take a running start towards the cracked wall. As you near it you brace for impact, and us your shoulders to smash straight through.
+&lt;img src=&quot;https://daniel-pfeffer.github.io/images/dungeon_kobold.jpg&quot;  class=&quot;story-image&quot;&gt;The wall crumbles and you can hear a high pitched shriek right away. While waiting for the dust to settle you remain vigilant, (if:$items contains $item_sword)[ready your brand new sword,] and look around.
+
+You find yourself in a narrow corridor that looks to lead up to a T intersection farther up ahead. Seeing as you whatever enemy you might have had is probably injured, you can either decide to head on ahead to [[get more distance|Death by pit]], or wait for the dust to clear up and (link-reveal:&quot;chance an encounter with whatever you can hear digging through the rubble.&quot;)[(if:$items does not contain $item_sword)[
+Deciding to stay and fight, you ready your fist as a small green creature becomes visible through the setting dust. Now seeing that it is a simple goblin, and even looks very injured you rush towards it before it can come to it&#39;s senses. A quick hit to the skull and you can hear your armoured fists smashing through bone. The creature soundlessly crumples to the ground.
+
+There is nothing else around so you look ahead, and start sweating as you thank whatever god may be listening that you didn&#39;t choose to rush forward. You slowlyexamine the massive pit that has appeared at the end of the tunnel, and see that it is at least 3 meters deep, with sharp dagger-like stones at the bottom.
+
+See as this is the only way, you head back, and get ready for a running jump. With plenty of room to accelerate you manage to easily clear the pit, and find yourself on another corridor.
+
+To the right it just continues straight, whil on the left you can see a small indent, producing a blue glow. Realizing it to be magic you feel the need to [[explore|BeforeIdolRoom]]  that way
+
+](else:)[
+Deciding to stay and fight, you steaedy your grip on your sword as a small green creature becomes visible through the setting dust. Now seeing that it is a simple goblin, and even looks very injured you rush towards it before it can come to it&#39;s senses. A quick swing through the nek and it&#39;s head falls to the ground, the creature soundlessly crumpling.
+
+There is nothing else around so you look ahead, and start sweating as you thank whatever god may be listening that you didn&#39;t choose to rush forward. You slowlyexamine the massive pit that has appeared at the end of the tunnel, and see that it is at least 3 meters deep, with sharp dagger-like stones at the bottom.
+
+See as this is the only way, you head back, and get ready for a running jump. With plenty of room to accelerate you manage to easily clear the pit, and find yourself on another corridor.
+
+To the right it just continues straight, whil on the left you can see a small indent, producing a blue glow. Realizing it to be magic you feel the need to [[explore|BeforeIdolRoom]]  that way
+]]</tw-passagedata><tw-passagedata pid="18" name="Entry hall" tags="" position="1000,2475" size="100,100">&lt;img src=&quot;https://daniel-pfeffer.github.io/images/dungeon_main.jpg&quot;  class=&quot;story-image&quot;&gt;As you look around the room the first thing that you notice a [[small well|small well]] right at the center. Looking left you can see a [[small path|shared path int trap]] leading to a corner before turning right and continuing on(if:$Class is &quot;Mage&quot;)[, as well as a [[shimmering wall|int path 1]]].
+
+Straight ahead you can see a worn down wall with a multitude of cracks crisscrossing all over it. (if:$Class is &quot;Knight&quot; )[ With your training you could perhap [[shatter it|Enemy Corridor]]. You might find something interesting behind it]
+
+As you continue checking the room you feel a small breeze coming from the right side, and you seem to smell the ocean slightly. It might be another entrance, but could be worth [[exploring|Pond room]].
+
+In the upper right conner ahead you can see a small winding path that looks difficult to traverse(if:$Classs is &quot;Rogue&quot;)[, though your training should make it possible to [[continue that way|agi path]]]. The final exit from the room leads straight into a [[small room with a big eye motif|PassageBeforeTideStone]],</tw-passagedata><tw-passagedata pid="19" name="Entry hall after death" tags="" position="1100,3150" size="100,100">{
+(set: $INT to $B_INT )
+(set: $STR to $B_STR )
+(set: $AGI to $B_AGI )
+(set: $Name to $B_Name)
+(set: $Class to $B_Class)
+(set: $spells to $B_spells)
+(set: $items to $B_items)
+(set: $Gold to $B_Gold)
+(set:$northernTrapAwareness to 0)
+(set:$northernTrapAvoidSuccess to 0)
+(set:$northernTrap_disarmed to 0)
+(set:$minorInjury to 0)
+(set:$majorInjury to 0)
+(set:$illusionWallDispelled to 0)
+(set:$pillar1Symbol to 0)
+(set:$pillar2Symbol to 0)
+(set:$pillar3Symbol to 0)
+(set:$tideStoneRetrieved to 0)
+(set:$foundActivationLever to 0)
+(set:$Insanity to it + 1)
+(set:$well to false)
+
+&lt;!--Short notice of player death and informing him, he is in the Entry hall again--&gt;
+}You wake up very exhausted, just as if you had a very bad nightmare. Looking around you find yourself in the Entry Hall of the dungeon. Wondering why you took a nap right here, [[you continue your journey|Entry hall]].</tw-passagedata><tw-passagedata pid="20" name="EvilEnding" tags="" position="1300,3950" size="100,100">Exiting the temple, the Idol feels not like a burden, but an extension of your own will. The moonlight seems to dim in its presence, or perhaps it is your perception that is changing, attuning to the shadows. The island air, once filled with the vague terror of others, now sings with a symphony of potential only you can hear.
 
 
-}&lt;!--STR paths--&gt;
-(if:$STR is  4)[[Try to punch the cracked wal|Enemy Corridor]]
-{
-&lt;!--Int paths--&gt;
-
-(if:$INT &gt;= 3)[[[The wall to the left of the room shimmers slightly. Inspect it closer|int path 1]]](else:)[[[The wall to the left of the room shimmers slightly. Inspect it closer|int path 1 opt]]]
+Why destroy such a potent artifact? Why free these weak-minded islanders from their fears when those fears could be... useful? Harnessed?
 
 
-}&lt;!-- General paths --&gt;
-[[Check the upper left path|shared path int trap]]
-[[Check to see small room with PUZZLE motifs|Puzzle room 1]]
-[[You feel an ocean breeze from this room|Pond room]]
-[[You hear grumbling snores from another corridor|agi path]]</tw-passagedata><tw-passagedata pid="12" name="Idol room" tags="" position="900,3400" size="100,100">description, action what to do with idol, maybe safe exit right after taking idol(could depend on what action was chosen with idol)
+(link-reveal: &quot;Find a place of power to attune with the Idol&quot;)[
 
-[[END]]</tw-passagedata><tw-passagedata pid="13" name="IntDream" tags="" position="975,750" size="100,100">This is the initial Intelligence Dream
+    You seek out the deepest, most forgotten catacomb beneath the temple. There, in absolute, echoing darkness, you begin to explore the Idol&#39;s capabilities, not to end them, but to understand and control them.
+
+
+    The Idol resists at first, its chaotic nightmare energy lashing out. But your will is strong, your ambition stronger. Slowly, painstakingly, you wrestle its power into submission, bending it to your own designs. The thrumming in your hand changes from a wild pulse to a steady, rhythmic beat, a dark heart you now command.
+
+
+    (link-reveal: &quot;Unleash your new dominion&quot;)[
+        From your seat of power, you extend your influence. The nightmares of the islanders do not cease. Instead, they become... directed. Specific. You learn to weave their fears, to pluck the strings of their anxieties. Those who oppose you are plagued by horrors tailored to their deepest dreads until they break or flee. Those who serve you find their nights surprisingly peaceful, a stark contrast that ensures loyalty.
+
+
+        The island transforms into your personal fiefdom of fear. You are not a hero, nor a failure. You are something far more terrifying: the Master of Nightmares, a dark sovereign ruling through the carefully orchestrated terrors of the mind. The Idol is your scepter, and the island your first conquest. The world beyond awaits.
+
+
+        &#39;&#39;You have achieved the Evil Ending: Master of Nightmares.&#39;&#39;
+    ]
+]</tw-passagedata><tw-passagedata pid="21" name="ExamineTideMurals" tags="" position="1500,2200" size="100,100">You study the ancient murals painted on the chamber walls. They are faded and water-damaged in places, but depict various scenes:
+
+Mural 1 (Behind Pillar 1): &quot;A colossal **Kraken** rises from stormy seas, its tentacles ensnaring a ship. High above, a sliver of a **Crescent Moon** peeks through the dark clouds.&quot;
+
+Mural 2 (Behind Pillar 2): &quot;A serene underwater kingdom. Merfolk swim amongst vibrant coral reefs. One prominent figure, clearly a ruler, holds a gleaming **Trident** aloft, light glinting from its prongs.&quot;
+
+Mural 3 (Behind Pillar 3): &quot;A powerful sorcerer stands on a cliff, arms outstretched towards a tumultuous ocean. Great **Waves** crash against the rocks at his command, their crests white with foam.&quot;
+
+You ponder the significance of these depictions.
+
+
+[[Return to the puzzle|TideStonePuzzleChamber]]</tw-passagedata><tw-passagedata pid="22" name="ExamineTidePool" tags="" position="1675,2225" size="100,100">The water in the central pool is cool and surprisingly clear. The Tide Stone rests on its plinth, its blue light refracting through the water, casting dancing patterns on the ceiling. The plinth itself looks solid, and the stone seems to be connected to some mechanism beneath the water – perhaps a way for it to rise or for the water to drain.
+
+
+[[Return to the puzzle|TideStonePuzzleChamber]]</tw-passagedata><tw-passagedata pid="23" name="ExitTideChamber" tags="" position="1550,2550" size="100,100">Clutching the Tide Stone, you leave the puzzle chamber behind...
+
+[[Continue your journey|Entry hall]]</tw-passagedata><tw-passagedata pid="24" name="FindActivationLevelTide" tags="" position="1700,2350" size="100,100">(if: $startup is true or $foundActivationLever is 0)[(set: $foundActivationLever to false)]
+
+You scan the chamber for anything that looks like it could activate a mechanism. Tucked away in a shadowed alcove, partially hidden by a hanging drape of seaweed (real or carved), you find a rusted **iron lever** set into the wall. It looks like it hasn&#39;t been moved in centuries.
+(set: $foundActivationLever to true)
+
+[[Return to the puzzle|TideStonePuzzleChamber]]</tw-passagedata><tw-passagedata pid="25" name="GoodEnding" tags="" position="1150,3950" size="100,100">Retracing your steps through the labyrinthine temple feels different now. The shadows seem less menacing, the oppressive silence less absolute. Or perhaps it&#39;s the hope kindled by the Idol in your possession. You navigate the passages, bypass the traps you encountered, and finally emerge from the temple&#39;s dark maw into the moonlight.
+
+
+The air outside, though still tinged with the island&#39;s unique atmosphere, feels cleaner, lighter. You find a secluded, moonlit cliff overlooking the ocean – a place that feels pure and untainted.
+
+
+    (link-reveal: &quot;Observe the island&quot;)[
+
+        Over the next few days, a subtle but undeniable change comes over the island. The haunted, weary look begins to fade from the eyes of the inhabitants. Children&#39;s laughter, once a rarity, is heard more often. People speak of sleeping soundly for the first time in memory, their dreams no longer plagued by shadowy terrors.
+
+
+
+        The island slowly awakens from its long, collective nightmare. You are hailed as a hero, the one who broke the ancient curse. Though your journey was perilous, you brought peace and restful slumber back to these lands. Your legend will be told for generations.
+
+
+
+        &#39;&#39;You have achieved the Good Ending: The Restored Slumber.&#39;&#39;
+    ]</tw-passagedata><tw-passagedata pid="26" name="Idol room" tags="" position="1150,3825" size="100,100">The passage through the parted smoke leads you into a smaller, more intimate chamber, a true sanctum. The air here is still and heavy, charged with ancient power.
+
+
+Directly ahead, upon a tiered //stone dais//, stands a grand, ornate //altar//. Several tall, flickering //candles or braziers// illuminate it, their light glinting off the object of your quest.
+
+
+&lt;img src=&quot;https://daniel-pfeffer.github.io/images/dungeon_idol.jpg&quot;  class=&quot;story-image&quot;&gt;There, resting on a velvet cushion, is the **Whispering Idol**.
+
+The idol is within reach. The chamber is silent, save for the flickering of the flames.
+
+[[Take the idol and destroy it|GoodEnding]]
+[[Take the idol and toss it away|BadEnding]]
+[[Take the idol and keep it|EvilEnding]]</tw-passagedata><tw-passagedata pid="27" name="IntDream" tags="" position="975,750" size="100,100">{
 (set: $INT to it + 2)
 (set: $STR to it + 0)
 (set: $AGI to it + 1)
+}&lt;img src=&quot;https://i.pinimg.com/736x/f1/01/83/f10183afaefb9738574fd4ee7763bc29.jpg&quot; class=&quot;story-image&quot;&gt;You can still remember your joy when you finally set foot in the massive magical tower to register for your first semester. Since you were a small child you have always been fascinated by [[magic|IntDreamInt]].
 
-[[IntDreamStr]]
-[[IntDreamInt]]
-[[IntDreamAgi]]</tw-passagedata><tw-passagedata pid="14" name="IntDreamAgi" tags="" position="1075,875" size="100,100">This is the second Int dream Dream
-(set: $INT to it + 1)
-(set: $STR to it + 0)
-(set: $AGI to it + 2)
-(set: $Class to &quot;&quot;)
+Your first encounter with it was when you were still a small child, though you still remember it as clear as day. Your town was besieged by monsters, and everyone was fighting to make sure they couldn&#39;t get over the wall while waiting for reinforcements from the nearby settlements. You can still remember Lord Thorley come flying in and [[wrecking havoc|IntDreamStr]] among the beasts with a flaming magical blade. Even from your [[hiding spot|IntDreamAgi]] you could see the fierce flames incinerating anything coming close to them.</tw-passagedata><tw-passagedata pid="28" name="IntDreamAgi" tags="" position="1075,875" size="100,100">{(set: $INT to it + 1)(set: $STR to it + 0)(set: $AGI to it + 2)(set: $Class to &quot;Mage&quot;)
+}You can still feel the terror coursing through your veins hearing the sounds of combat just a few dozen meters away. You remember praying to any deity you could remember for safety. After seeing the decimation a single mage caused on the battlefield you became determined to learn all you could about them.
 
-[[DreamEnd]]</tw-passagedata><tw-passagedata pid="15" name="IntDreamInt" tags="" position="975,875" size="100,100">This is the second Int dream Dream
-(set: $INT to it + 2)
-(set: $STR to it + 0)
-(set: $AGI to it + 1)
-(set: $Class to &quot;&quot;)
+Your next few years were spent in the library trying to read up on all information available in your small town, and looking for a mentor to guide you further. While the library wasn&#39;t expansive, the empire made sure that all towns had some information on theory available for aspiring mages, so you were able to build a solid foundation. You were lucky to find a retired mage spending his last few years just relaxing in the town, and after some negotiations you became his apprentice while getting ready for the academy entrance exam.
 
-[[DreamEnd]]</tw-passagedata><tw-passagedata pid="16" name="IntDreamStr" tags="" position="875,875" size="100,100">This is the second Int dream Dream
-(set: $INT to it + 1)
-(set: $STR to it + 2)
-(set: $AGI to it + 0)
-(set: $Class to &quot;&quot;)
+The chirping of seagulls startles you from the recollections, hinting that you shall soon be making [[landfall|DreamEnd]] on the island.</tw-passagedata><tw-passagedata pid="29" name="IntDreamInt" tags="" position="975,875" size="100,100">{(set: $INT to it + 2)(set: $STR to it + 0)(set: $AGI to it + 1)(set: $Class to &quot;Mage&quot;)
+}After the battle you spent most of your time in the local town library studying everything related to magic. While there weren&#39;t any actual spells, the empire ensured that some theory was available for all aspiring mages such as yourself. Once it was clear that you would need a teacher for anything more advanced, you began looking around for any possibilities. 
 
-[[DreamEnd]]</tw-passagedata><tw-passagedata pid="17" name="IntroEdward" tags="" position="1000,1425" size="100,100">Surprised to see you, tired and fed up. short introduction. (if martial focus chosen could be friend from acedemy. seperate convo then, volunteers to guide you to the temple later), tells you to look for selene for guide as he is on patrol
+Since the town was pretty small all things considered, there were only a few apprentice ranked mages around, mostly healers, and they did not wish to teach some kid for free. After annoying them for quite some time they finally referred you to an elderly man who they knew to be a retired mage living out his twilight years in the peaceful countryside. Finally finding someone willing to guide you, you started diving even deeper into the mystic arts.
 
+The chirping of seagulls startles you from the recollections, hinting that you shall soon be making [[landfall|DreamEnd]] on the island.</tw-passagedata><tw-passagedata pid="30" name="IntDreamStr" tags="" position="875,875" size="100,100">{(set: $INT to it + 1)(set: $STR to it + 2)(set: $AGI to it + 0)(set: $Class to &quot;Mage&quot;)
+}The sheer power you saw was engraved into your memory to this day. The overwhelming strength a mage represented on a battlefield could singlehandedly change the course of any engagement.
 
-[[Look around the port some more|Arrival at port]]
-(if:(history: where its name contains &quot;StrDreamStr&quot;)&#39;s length is 1)[[Recieve Edward&#39;s Token|Token]]
-[[IntroSelene]]</tw-passagedata><tw-passagedata pid="18" name="IntroGuss" tags="" position="1125,1425" size="100,100">Mercvhent, you can buy stuff for the exploration. probably done using a link system(mitht not be iplemented, needs balancing and maybe economy)
-Can give directions to town center, but recommends looking for official for help
+You spent the following days studying up on everything related to magic in the local library. Though there were no concrete spells available, as this would have caused far too much chaos and danger in the hands of an everyday peasant, the empire made sure that plenty of foundational theory was available for any aspiring mages. Your years were thus spent preparing for the academy entrance exam. While you wouldn&#39;t be anyone exceptional, the academy knew not to expect too much with most information being restricted. You were overjoyed upon getting accepted into the Imperial Mages Academy.
 
-[[Try to fin the town center on your own|Back alley event]]</tw-passagedata><tw-passagedata pid="19" name="IntroSelene" tags="" position="875,1425" size="100,100">(set: $Intro to true)
+The chirping of seagulls startles you from the recollections, hinting that you shall soon be making [[landfall|DreamEnd]] on the island.</tw-passagedata><tw-passagedata pid="31" name="IntroEdward" tags="" position="1000,1425" size="100,100">(if:(history: where its name contains &quot;StrDreamStr&quot;)&#39;s length is 0)[Guessing that it would be best to introduce yourself to the local enforcement, as might yield some clues about what is going on, you head towards the knight. He seems to perk up as you get near, showing that even as tired as he looks, he is still very aware of his surrounding. 
+(link-reveal:&quot;&#39;Greetings Ser! I have just arrived and am looking for the way to the Mayor&#39;s office. Could you please point me that way?&#39;&quot;)[
+(link-reveal:&quot;&#39;Good morning to you as well, and who might you be? I can&#39;t remember the mayor waiting for any new arrivals.&#39;&quot;)[
+(link-reveal:&quot;&#39;I am $Name. I was tasked to find the source of the anomaly that seems to be plaguing the island&#39;s residents. I would also be grateful for any clues you could provide me about the phenomenon, seeing as it seems to be far more widespread than I was lead to believe.&#39;&quot;)[
+(link-reveal:&quot;&#39;In that case you should look for Selene. She should be around the dock if you are expected. I think I saw her around the pier where your ship just landed. She is the only elf in the settlement currently, should be easy to find.&#39;&quot;)[
+&#39;Thank you, I might have passed her on the way in that case, I&#39;ll go [[looking for her|IntroSelene]]. Have a nice day.&#39;
 
-You decide to head towards the elf, seeing as you should probably introduce yourself to the local leadership, if only to gather fresh information about your task.They should also be able to provide any details that the official briefing could have missed.
+As you leave you can see that the dock is getting more crowded as more ships start arriving. You could still [[look around the port some more|Arrival at port]] before finding Selene.
+]]]]]
 
-As you get closer you can clearly identify the emblen of the duke on her shoulders, signifying her the government. She seems to be talking rather animatedly to the captain that just brought you here. AS you get closer you starting making out the (link-reveal:&quot;topic.&quot;)[
-(link-reveal:&quot;&#39;What do you mean he already left? you just finished docking!&#39;&quot;)[
-(link-reveal:&quot;&#39;I jus said he walkd off right away! you didn say anythin abou meetin on arrival!&#39;&quot;)[
-(link-reveal:&quot;&#39;I thought it was obvious with me standing here! What else do you trhink the mayor&#39;s secretary would be doing here at dawn?&#39;&quot;)[
-You decide it is about time to introduce yourself before tempers flair anymore. 
+(if:(history: where its name contains &quot;StrDreamStr&quot;)&#39;s length is 1)[Upon seeing a familiar face you grin and head straight towards Edward. It has been ages since you have last seen him, and if nothing else you definitely want to catch up with him a little. As you get closer he turns towards you and frowns. You can see him trying to recall something, before an enlightened look comes across his face. 
+(link-reveal:&quot;&#39;Lord Edward! What a surprise to see you here! You just left without a word during my last year. We all missed your training when preparing for the final exam.&#39;&quot;)[
+(link-reveal:&quot;&#39;Good morning to you as well, it has been a while, hasn&#39;t it? Sorry for the quick departure, it started out as a simple family matter, but later became far more complicated, and I didn&#39;t manage to get back to the academy in time.&#39;&quot;)[
+(link-reveal:&quot;&#39;Well life always finds a way to complicate our problems, I hope you managed to resolve it well enough. Now I came to meet the mayor, but I would love to hear any details you can offer me about the recent phenomenon.&#39;&quot;)[
+(link-reveal:&quot;&#39;In that case you should look for Selene. She should be around the dock if you are expected. I think I saw her around the pier where your ship just landed. She is the only elf in the settlement currently, should be easy to find.
+
+I can&#39;t really offer any details myself sadly. Some time ago the populace just started having nightmares and it keeps getting worse. Recently even I have been having trouble sleeping as you can see, and other than the mayor and Selene I would say I am the strongest resident of the town. I really hope you manage to resolve it easily.&#39;&quot;)[
+(link-reveal:&quot;&#39;Well in that case I better get going, I will try to solve it as soon as possible.&#39;&quot;)[
+(link-reveal:&quot;&#39;Well good luck then, if you need any help just send someone to find me.&#39;&quot;)[
+
+As you prepare to leave he hands you a token with the insignia of his house engraved upon it.
+(set:$Token to true)
+
+While leaving you can see that the dock is getting more crowded as more ships arrive. You could still [[look around the port some more|Arrival at port]] before finding Selene, but with the matter being more urgent than you thought, it might be better to head straigt to [[her|IntroSelene]].
+]]]]]]]</tw-passagedata><tw-passagedata pid="32" name="IntroGuss" tags="" position="1125,1425" size="100,100">{
+(if: $items is 0)[(set:$items to (ds:))]
+}With your curiosity driving you, you decide to check the merchant. With his kind being rather rare in the area, he might have some unique insight into the situation, or just some useful gadgets he could offer.
+
+Getting closer you note that he seems more energetic than the rest of the townsfolk, hawking his wares to anyone who would (link-reveal:&quot;listen.&quot;)[
+(link-reveal:&quot;&#39;Come and check out the newest goods straight from the heart of the empire, just in from the fresh shipment this morning! Come, come, come!&#39;&quot;)[
+You could look over his wares to see if you need anything he is (link-reveal:&quot;selling:&quot;)[
+(if: $items does not contain $item_dagger)[(link:&quot;A small dagger for 3 gold&quot;)[(set: $items to it +(ds:$item_dagger))(set:$Gold to it - 3)]]
+(if: $items does not contain $item_sword)[(link:&quot;A one handed sword for 10 gold&quot;)[(set: $items to it + (ds:$item_sword))(set:$Gold to it - 10)]]
+(if: $items does not contain $item_crystal)[(link:&quot;A crystal ball for 25 gold&quot;)[(set: $items to it+(ds:$item_crystal))(set:$Gold to it - 25)]]]
+(if:$Mayor)[
+and since you are in a hurry, you try (link-reveal:&quot;striking a conversation with the lively dwarf.&quot;)[
+(link-reveal:&quot;&#39;Good morning sir, you seem rather lively compared to the rest of the people around. Could you tell me your secret?&#39;&quot;)[
+(link-reveal:&quot;&#39;Morning to you as well young traveller! I am sad to say I just arrived this morning, and have yet to encounter the mysterious nightmares everyone seems to be having. I heard there might be large mines on the island, and decided to try my luck opening a smithy before any of my kin could arrive. These wares are just to collect the money needed to start the small business.&#39;&quot;)[&#39;In that case I hope to solve the problem before you can be affected.&#39;, you say as you leave the port again, now heading straight to [[where the mayor told you the ominous temple was located|Lost in Jungle]].]]]
+](else:)[
+and since you are in a hurry, you try (link-reveal:&quot;striking a conversation with the lively dwarf.&quot;)[
+(link-reveal:&quot;&#39;Good morning sir, you seem rather lively compared to the rest of the people around. Could you tell me your secret?&#39;&quot;)[
+(link-reveal:&quot;&#39;Morning to you as well young traveller! I am sad to say I just arrived this morning, and have yet to encounter the mysterious nightmares everyone seems to be having. I heard there might be large mines on the island, and decided to try my luck opening a smithy before any of my kin could arrive. These wares are just to collect the money needed to start the small business.&#39;&quot;)[
+(link-reveal:&quot;&#39;In that case I hope to solve the problem before you can be affected. Could you perhaps point me towards the town center, I seem to be missing my guide.&#39;&quot;)[
+(link-reveal:&quot;&#39;I just arrived, so I don&#39;t know how precise I can be, but I have heard it is that way.&#39;&quot;)[He says as he points towards [[the main road leading further into the island|Back alley event]].
+(link-reveal:&quot;&#39;But I would recommend trying to find an official, I am pretty sure I saw a pretty elf running around somewhere, or perhaps the guards could offer some help.&#39;&quot;)[
+(link-reveal:&quot;&#39;Thank you for your help, I best start looking then.&#39;&quot;)[
+After saying godbye, you leave the dwarf to [[look around some more|Arrival at port]]. Though since time might be tight you could also just start heading towards the town [[alone|Back alley event]].
+]]]]]
+]]]]]</tw-passagedata><tw-passagedata pid="33" name="IntroSelene" tags="" position="875,1425" size="100,100">{(set: $Intro to true)
+
+}You decide to head towards the elf, seeing as you should probably introduce yourself to the local leadership, if only to gather fresh information about your task. They should also be able to provide any details that the official briefing could have missed.
+
+As you get closer you can clearly identify the emblem of the duke on her shoulders, signifying the government. She seems to be talking rather animatedly to the captain that just brought you here. As you get closer you starting making out the (link-reveal:&quot;topic.&quot;)[
+(link-reveal:&quot;&#39;What do you mean he already left? You just finished docking!&#39;&quot;)[
+(link-reveal:&quot;&#39;I jus said he walked off right away! you didn say anythin abou meetin on arrival!&#39;&quot;)[
+(link-reveal:&quot;&#39;I thought it was obvious with me standing here! What else do you think the mayor&#39;s secretary would be doing here at dawn?&#39;&quot;)[
+You decide it is about time to introduce yourself before tempers flair even more. 
 &#39;Good morning my lady! I believe you must be looking for me, though the brief did not contain anything about the local contact other than the mayor.&#39;
-&#39;Oh thank god, you must be $Name ! Sadly since the assignment was already issued we could not correct it in time. I was given the task of escorting you to the meeting with the mayor. While other times we might need to wait for a more reasonable hour, sadly with the current predicament he should be already up and working&#39;
+&#39;Oh thank god, you must be $Name ! Sadly since the assignment was already issued we could not correct it in time. I was given the task of escorting you to the meeting with the mayor. While other times we might need to wait for a more reasonable hour, sadly with the current predicament he should be already up and working.&#39;
 &#39;Thank you then, may I have a name as well?&#39;
 &#39;Oh of course, my name is Selene Ashbark, at your service!&#39;
-&#39;Then while i would love to look around the [[port|Arrival at port]] some more, we should probably [[get going|TownCenter]] to solve this issue as soon as possible&#39;
+&#39;Then while I would love to look around the [[port|Arrival at port]] some more, we should probably [[get going|TownCenter]] to solve this issue as soon as possible!&#39;
+]]]]</tw-passagedata><tw-passagedata pid="34" name="Introduction" tags="" position="1100,2075" size="100,100">(link-reveal:&quot;&#39;Halt stranger, what business do you have here?&#39;&quot;)[
+(link-reveal:&quot;&#39;I come from afar and was invited by the mayor to help resolve the recent phenomenon happening. I wish to meet him to introduce myself, and to receive any details he can provide that were not included in the original assignment.&#39;&quot;)[
+(link-reveal:&quot;&#39;Do you have any proof of what you say? We can&#39;t just let anyone through with that excuse.&#39;&quot;)[
+You think it over. Though you have your official ID that won&#39;t really solve the issue here. Instead you dig around in your bag and hand over your (link-reveal:&quot;&#39;Guild assignment sheet.&#39;&quot;)[
+(link-reveal:&quot;&#39;Ah, yes this should do fine, go on ahead, the mayor is already waiting for you.&#39;&quot;)[
+You thank them for their time, and [[head on inside|Mayor Meeting]]]]]]</tw-passagedata><tw-passagedata pid="35" name="JumpDown" tags="" position="750,3000" size="100,100">Deciding that caution might take too long, or perhaps feeling a surge of reckless abandon, you take a few steps back from the edge. With a running start, you launch yourself into the dim space below.
 
-]]]]</tw-passagedata><tw-passagedata pid="20" name="Introduction" tags="" position="1100,2075" size="100,100">[[Mayor Meeting]]</tw-passagedata><tw-passagedata pid="21" name="Lost in Jungle" tags="" position="1100,2200" size="100,100">Sidequest for familiar
 
-[[Temple entrance]]</tw-passagedata><tw-passagedata pid="22" name="Mayor Meeting" tags="" position="975,2075" size="100,100">You walk down the halls admiring the lowkey luxury already present, though it seems this mayor isn&#39;t the type to overspend on personal extravagance before the town is set up properly. This holds promise for you, as such individuals are usual on top of their game, so you can hope for a well put together briefiong after arriving. 
+There&#39;s a brief, heart-stopping moment of freefall.
+(set: _jumpSuccess to (random: 1, 2))
+(if: _jumpSuccess is 1)[
+    You hit the ground much harder than anticipated. A sickening crack echoes from your left leg as pain explodes through you, forcing a cry from your lips. You collapse onto the stone, vision swimming. Your leg is almost certainly broken, or at the very least severely sprained. Moving will be an exercise in agony.
+    (set: $majorInjury to &quot;badly injured leg&quot;)
 
-Your thought are broken as yuo (link-reveal:&quot;enter the main office.&quot;)[
+    [[Grin and bear it, moving into the lower tunnel|shared path from int path]]
+](else:)[
+    You manage to tuck your body somewhat as you land, rolling with the impact. It’s still a jarring collision, knocking the wind from your lungs and sending a shockwave up your spine. You lie there for a moment, gasping, but a quick check reveals no broken bones – just a collection of new bruises and a racing heart.
+    (set: $minorInjury to &quot;bruised ankle&quot;)
+
+    [[Stagger to your feet and enter the lower tunnel|shared path from int path]]
+]</tw-passagedata><tw-passagedata pid="36" name="Lost in Jungle" tags="" position="1150,2225" size="100,100">Sidequest for familiar
+
+[[Temple entrance]]</tw-passagedata><tw-passagedata pid="37" name="LowerTunnelExplore" tags="" position="450,3250" size="100,100">{
+(if: $startup is true or $illusionWallDispelled is 0)[(set: $illusionWallDispelled to false)]
+(if: $startup is true or $items is 0)[(set: $items to (ds:))]
+(if: $startup is true or $spells is 0)[(set: $spells to (ds:))]
+
+}You venture deeper into the lower tunnel. The air grows colder, and the silence is broken only by the crunch of your footsteps on the gritty floor. After a short walk, the passage appears to end in a solid wall of rock. It looks like a dead end.
+
+
+However, something feels... off. A faint shimmer, almost imperceptible, dances across the surface of the rock if you stare at it long enough, and the air here hums with a subtle, unnatural energy.
+&lt;img src=&quot;https://daniel-pfeffer.github.io/images/dungeon_illusion2.jpg&quot;  class=&quot;story-image&quot;&gt;
+(if: not $illusionWallDispelled)[
+    (link-reveal: &quot;Examine the wall more closely&quot;)[
+
+        You run your hand over the stone. It feels real enough, cold and unyielding. Yet, the faint visual distortion persists, and that strange hum is undeniable. You suspect this might be more than simple rock.
+
+        This could be an illusion.
+
+        [[Try to push through it|PushIllusion]]
+        (if: $spells contains $spell_dispel)[[[Cast &#39;Dispel Illusion&#39;|CastDispel]]]
+        (if: $items contains $item_tide_stone)[[[Use &#39;Tide Stone&#39;|UseDispelItem]]]
+        (if:$spells does not contain $spell_dispell and $items does not contain $item_tide_stone)[[[Pray that someone finds you here|DieAtWall]]]
+        [[Study the wall for weaknesses or triggers|StudyIllusion]]
+    ]
+](else:)[
+    The archway, once hidden by illusion, stands open before you, revealing a passage beyond.
+
+    [[Step through the revealed archway|after illusion wall]]
+]</tw-passagedata><tw-passagedata pid="38" name="Mayor Meeting" tags="" position="975,2075" size="100,100">{(set:$Mayor to True)
+}You walk down the halls admiring the lowkey luxury already present, though it seems this mayor isn&#39;t the type to overspend on personal extravagance before the town is set up properly. This holds promise for you, as such individuals are usual on top of their game, so you can hope for a well put together briefing after arriving. 
+
+Your thoughts are broken as you (link-reveal:&quot;enter the main office.&quot;)[
 You can see a sturdy man sitting on the comfortable looking chair at the other side of the room. His beard is well trimmed and his hair well maintained, but you can see the familiar bags under his eyes that seem to be everpresent around town.
 &#39;Welcome $Name ! I am glad you arrived so soon and without an complications, we have much to discuss. I am Mayor Eddis Bok, and I welcome you to our small settlement!&#39;
 &#39;Greetings Mr. Bok. You seem to be doing a good job of growing this small town, and hopefully I can ease the difficulties by solving the mystery that has been plaguing you.&#39;
-&#39;That would be quite helpful, working on only a few hours of sleep is starting to drive me mad, and sadly it seems that might not be just an exageration. In the past few weaks the settlers building this small town have been bothered by increasingly disturbing nightmares. At the start it was just a few people, and they had no problems going back to sleep, however as more time passed the situation became far more severe. Currently Most townsfolk are affected, and even magical artifacts can only dull the effects as you can see on me. The dreams seem to create personal nightmares for everyone affected, with the only commonality being a golded idol appearing at the very end, promising wealth and power to anyone capable of finding it.&#39;
+&#39;That would be quite helpful, working on only a few hours of sleep is starting to drive me mad, and sadly it seems that might not be just an exaggeration. In the past few weeks the settlers building this small town have been bothered by increasingly disturbing nightmares. At the start it was just a few people, and they had no problems going back to sleep. However, as more time passed the situation became far more severe. Currently most townsfolk are affected, and even magical artifacts can only dull the effects as you can see on me. The dreams seem to create personal nightmares for everyone affected, with the only commonality being a golden idol appearing at the very end, promising wealth and power to anyone capable of finding it.&#39;
 &#39;That seems more ominous than the initial assignment hinted. Are there any clues to where the idol may be, or what might have started the dreams?&#39;
-&#39;The only incident that comes to mind is the exporation troops uncovering a small temple entrance near the east side of the island. While surveying the island my people came across a small stone arch under some collapsed rocks. WHen they removed them they found a labyrinth behind them. They reported back, and it was decided that we will wait untill the town is more established to explore deeper. You should probably start by exploring this monument before heading elsewhere for more clues.&#39;
-&#39;Thank you for your help, in that case I should probably start the exploration as soon as possible, since we are burning valuable daylight. I&#39;ll be back with good news as soon as possible.&#39;
+&#39;The only incident that comes to mind is the exploration troops uncovering a small temple entrance near the east side of the island. While surveying the island my people came across a small stone arch under some collapsed rocks. When they removed them they found a labyrinth behind them. They reported back, and it was decided that we will wait until the town is more established to explore deeper. You should probably start by exploring this monument before heading elsewhere for more clues.&#39;
+&#39;Thank you for your help, in that case I should probably start the exploration as soon as possible, since we are burning valuable daylight. I&#39;ll be back with good news shortly.&#39;
 (if:$Token is false)[
-With your goodbyes said you turn to leave and heaad towards the [[temple|Temple entrance]].
+With your goodbyes said you turn to leave and head towards the [[temple|Lost in Jungle]]. After leaving the office you remember that you could also visit the [[merchant|IntroGuss]] you saw at port, he might have something that could help.]
+(if:$Token is true)[
+With your goodbyes said you turn to leave and head towards the entrance. Since Edward offered to help, you will need to meet up with him before heading to the [[temple|Temple entrance]]. You could also perhaps visit the [[merchant|IntroGuss]] you saw at port, he might have something that could help.]]</tw-passagedata><tw-passagedata pid="39" name="NorthernPathAttemptTrapAvoidance" tags="" position="125,2825" size="100,100">You meticulously pick your way across the narrowed passage, testing each footfall, trying to avoid any loose stones or direct pressure on the areas around the holes. It requires concentration and a steady hand.
+(set: $northernTrapAwareness to &quot;high&quot;)
+(set: $northernTrapAvoidSuccess to (random: 1, 2))
+[[Onwards|NorthernPathTrapResolution]]</tw-passagedata><tw-passagedata pid="40" name="NorthernPathCautiousPassageNoExamine" tags="" position="350,3050" size="100,100">Trusting your footing, you proceed through the narrowed section, mindful of the uneven ground but not stopping for a detailed inspection of the suspicious holes.
+(set: _northernTrap_awareness to &quot;low&quot;)
+[[Onwards|NorthernPathTrapResolution]]</tw-passagedata><tw-passagedata pid="41" name="NorthernPathQuickPassage" tags="" position="250,2975" size="100,100">Figuring speed might be an advantage, or simply wishing to get past the suspicious area quickly, you take a steadying breath and move swiftly through the narrowed passage.
+(set: $northernTrapAwareness to &quot;none&quot;)
+[[Onwards|NorthernPathTrapResolution]]</tw-passagedata><tw-passagedata pid="42" name="NorthernPathSearchForDisarm" tags="" position="0,2850" size="100,100">You carefully scan the walls and floor near the trapped section, looking for any hidden levers, pressure plates that might be decoys, or cut wires.
+{(set: $northernTrapAwareness to &quot;high&quot;)
+(set: _northernTrap_disarmFound to (random: 1, 3))
+}(if: _northernTrap_disarmFound is 1)[
+    Tucked behind a loose block of stone near the floor, you find a small, corroded metal plate. Pressing it causes a faint //clink// from beneath the floor. It seems you&#39;ve deactivated something.
+    (set: $northernTrap_disarmed to true)
 
+
+    [[Proceed with confidence|NothernPathPastTrapArea]]
+](else:)[
+    Despite your search, no obvious disarming mechanism presents itself. The trap remains a silent threat.
+
+
+    [[Attempt to carefully step over/around the treacherous section|NorthernPathAttemptTrapAvoidance]]
+    [[Decide to quickly move through the area|NorthernPathQuickPassage]]
+]</tw-passagedata><tw-passagedata pid="43" name="NorthernPathTrapResolution" tags="" position="100,3150" size="100,100">(if: $northernTrap_disarmed is true)[
+    You pass through the narrowed section without incident. Whatever danger lurked here has been neutralized or was never active.
+    (link: &quot;Continue onward&quot;)[(go-to: &quot;NorthernPath_PastTrapArea&quot;)]
+](else:)[{
+    (set: _triggerTrap to false)
+    (if: $northernTrapAwareness is &quot;none&quot; or $northernTrapAwareness is &quot;low&quot;)[
+        (if: (random:1, 2) is 1)(set: _triggerTrap to true)
+    ] (else-if: $northernTrapAwareness is &quot;high&quot; and $northernTrapAvoidSuccess is 2)[
+        (set: _triggerTrap to true)
+    ]
+
+}    (if: _triggerTrap is true)[
+        As your foot lands on a deceptively loose flagstone, it tilts, and you hear a sharp [[//CLICK!//|NorthernPathTrapTypeFallingDebris]] from beneath.
+    ](else:)[
+        You make it through the treacherous section. You hear a faint scraping sound as you pass the last of the holes, as if a mechanism reset, but nothing springs upon you.
+
+        [[Continue onwards, relieved|NothernPathPastTrapArea]]
+    ]
+]</tw-passagedata><tw-passagedata pid="44" name="NorthernPathTrapTypeFallingDebris" tags="" position="150,3300" size="100,100">{(set: $minorInjury to &quot;none&quot;)
+}Suddenly, a section of the low ceiling directly above the narrowed passage groans ominously! With a crack, heavy stones and debris begin to rain down!
+
+(set: _dodgeSuccess to (random: 1, 2))
+(if: _dodgeSuccess is 1)[
+    You react instinctively, throwing yourself forward or to the side. Most of the debris crashes down where you were moments before. However, a glancing blow from a fist-sized rock catches your shoulder, sending a shock of pain through you.
+    (set: $minorInjury to &quot;bruised shoulder from falling debris&quot;)
+
+    Dusting yourself off, you assess the damage – painful, but not incapacitating.
+
+
+    [[Press on, wincing|NothernPathPastTrapArea]]
+](else:)[
+    You don&#39;t react quickly enough! Several heavy stones strike you, one catching you a nasty blow on the head, another slamming into your back. You&#39;re knocked to your knees, stars exploding in your vision.
+    (set: $majorInjury to &quot;concussion and severe bruising from debris&quot;)
+
+    The world spins. Getting up is a monumental effort.
+
+
+    [[Struggle to your feet and continue|NothernPathPastTrapArea]]
+]</tw-passagedata><tw-passagedata pid="45" name="NotherPathCorridorWithTrap" tags="" position="125,2675" size="100,100">The corridor continues its descent, twisting slightly. After a short walk, the floor becomes treacherous – uneven, slick with patches of damp moss, and littered with loose stones. 
+&lt;img src=&quot;https://daniel-pfeffer.github.io/images/dungeon_trap.jpg&quot;  class=&quot;story-image&quot;&gt;Ahead, the passage narrows for a stretch, and you spot a series of small, dark holes dotting the floor across this chokepoint, almost hidden by shadows and debris.
+
+
+(link-reveal: &quot;Examine the floor and holes more closely&quot;)[
+    You cautiously approach the narrowed section, peering at the floor. The holes are undeniably man-made, arranged in a deliberate pattern. The ground around them looks slightly disturbed, as if concealing a mechanism. This definitely has the hallmarks of a trap.
+
+
+    [[Attempt to carefully step over/around the treacherous section|NorthernPathAttemptTrapAvoidance]]
+    [[Search the immediate vicinity for a way to disable the trap|NorthernPathSearchForDisarm]]
+    [[Decide to quickly move through the area, hoping to avoid triggering anything|NorthernPathQuickPassage]]
 ]
-(if:$Token is true)[With your goodbyes said you turn to leave and heaad towards the entrance. Since Edward offered to help, you will need to meet up with him before heading to the [[temple|Temple entrance]] ]
+
+[[Continue onward without specific examination, treading carefully|NorthernPathCautiousPassageNoExamine]]</tw-passagedata><tw-passagedata pid="46" name="NothernPathPastTrapArea" tags="" position="50,3475" size="100,100">{
+(if: $startup is true or $majorInjury is 0)[(set: $majorInjury to &quot;none&quot;)]
+(if: $startup is true or $minorInjury is 0)[(set: $minorInjury to &quot;none&quot;)]
+
+}Having navigated the trapped corridor (perhaps not unscathed), the Northern passage continues its descent. The air grows noticeably colder, and that faint, unnatural hum you might have detected on the Southern path becomes more pronounced here, seeming to vibrate through the very stone.
+
+(if: $majorInjury is not &quot;none&quot;)[
+    Your $majorInjury makes every step an agonizing effort. The cold air seems to bite deeper into your wounds.
+] (else-if: $minorInjury is not &quot;none&quot;)[
+    The dull ache of your $minorInjury is a constant companion, a reminder of the temple&#39;s dangers.
+]
+
+[[Venture into the dark|LowerTunnelExplore]]</tw-passagedata><tw-passagedata pid="47" name="PassageBeforeTideStone" tags="" position="1300,2350" size="100,100">The passage opens into a circular chamber, cooler than the rest of the temple. The air is damp, carrying the distinct briny scent of the sea, even though you are deep underground. Water drips rhythmically from unseen cracks in the domed ceiling, collecting in a shallow, shimmering pool that occupies the center of the room.
 
 
+Partially submerged in this central pool, resting on a stone plinth that just breaks the water&#39;s surface, is an object that glows with a soft, ethereal blue light: the **Tide Stone**. It&#39;s just out of reach.
 
-]</tw-passagedata><tw-passagedata pid="23" name="Pit" tags="" position="1125,2725" size="100,100">check if pit is notced and try to jump it
 
-[[Try to jump over the pit|Puzzle for door]]</tw-passagedata><tw-passagedata pid="24" name="Pond room" tags="" position="875,2600" size="100,100"></tw-passagedata><tw-passagedata pid="25" name="Puzzle for door" tags="" position="1000,3100" size="100,100">Need to figure óut an entire puzzle for this, might take entire sidequest branch, this is just a placeholder
+Around the perimeter of the room, at equidistant points, stand three imposing stone **pillars**. Each appears to be rotatable. Carved into the walls behind them are faded, ancient **murals** depicting scenes of the ocean.
 
-[[You hear a slight fizzle and see the door open ahead|Idol room]]</tw-passagedata><tw-passagedata pid="26" name="Puzzle room 1" tags="" position="1000,2600" size="100,100"></tw-passagedata><tw-passagedata pid="27" name="START" tags="" position="975,475" size="100,100">&lt;!--This part is used to set default variables and initialize game--&gt;
+
+[[Examine the Chamber and the Pillars|TideStonePuzzleChamber]]</tw-passagedata><tw-passagedata pid="48" name="Pond room" tags="" position="850,2600" size="100,100">&lt;img src=&quot;https://daniel-pfeffer.github.io/images/dungeon_pond.jpg&quot;  class=&quot;story-image&quot;&gt;Examining the room you find it bereft of manmade structures, other than a small canal carved into the ground leading back the way you came. (if:$well is false)[Finding where it connects to the pond you raise an eyebrow in surprise.
+
+There looks to be a small mechanical dam, currently closed, that connects the small pond to the canal. What is surprising is you can see what seems to be recent human activity around the controls. The dirt and plants covering the lever are brushed aside and damaged. Once you finish with your adventure you will need to inform the mayor to look for the one responsible.
+
+Seeing as there is nothing else in the room you could try to [[open the dam|opened dam transition]], or just return to the [[main hall|Entry hall]] ](else:)[Seeing the water backed up all the way to the pond you see nothing else to do, so you [[return to where you came from|Entry hall]].]</tw-passagedata><tw-passagedata pid="49" name="PushIllusion" tags="" position="650,3325" size="100,100">You brace yourself and push against the shimmering wall. Your hands meet solid, unyielding rock. It doesn&#39;t budge an inch, and the impact sends a slight jolt up your arms. It seems the illusion, if it is one, is more than just a visual trick; it has substance, or at least the convincing feeling of it.
+
+
+[[Reconsider your approach|LowerTunnelExplore]]</tw-passagedata><tw-passagedata pid="50" name="Rebirth awakening" tags="" position="625,1175" size="100,100">{
+(set: $Insanity to it + 1)
+}&lt;img src=&quot;https://www.cruisingworld.com/uploads/2021/09/Original-layout.jpg&quot;  class=&quot;story-image&quot;&gt;You shudder as you suddenly awaken, an ominous feeling comes over you. You are gasping for air as you can feel an overwhelming wrongness that you can&#39;t describe. Trying to figure out what is happening, you can suddenly hear the chirping of seagulls, and a familiar rocking of the boat. just as you start gathering yourself you hear a loud knock on the door.
+ (link-reveal:&#39;&quot;Oy! You up yet?&quot;&#39;)[
+
+&quot;Arr, we be making landfall in a few minutes. Now haul yer scurvy hide off me ship!”, grumbles the captain you’ve hired to bring you to the island, Lord Thorley hired you to investigate.
+
+As you get ready, you look outside the small windows seeing the sailors moving around and the docks closing by. They look rather new, with only a few ships docking, but have plenty of space for future expansions. 
+
+A few minutes later you hear the ship docking with sailors working around the deck making sure everything is adequately secured. You say goodbye to the captain and step onto the [[wooden piers|Arrival at port]].
+]</tw-passagedata><tw-passagedata pid="51" name="RetriveTideStone" tags="" position="1850,2500" size="100,100">You step onto the now-dry basin floor and approach the raised plinth. The Tide Stone pulses with a gentle, cool blue light. As your fingers close around it, you feel a faint thrumming, like the distant rhythm of the ocean&#39;s heart. It&#39;s surprisingly heavy, cool to the touch, and seems to absorb the ambient light.
+(set: $tideStoneRetrieved to true)
+(set: $items to it + (ds:$item_tide_stone))
+
+
+You have acquired the Tide Stone!
+
+
+[[Admire your prize, then leave|TideStonePuzzleChamber]]</tw-passagedata><tw-passagedata pid="52" name="START" tags="" position="975,475" size="100,100">&lt;!--This part is used to set default variables and initialize game--&gt;
+{
 (set: $INT to 0 )
 (set: $STR to 0 )
 (set: $AGI to 0 )
@@ -156,111 +615,228 @@ With your goodbyes said you turn to leave and heaad towards the [[temple|Temple 
 (set: $DeathCounter to 0)
 (set: $Insanity to 0)
 (set: $Class to &quot;&quot;)
-(set:$Token to false)
-(set:$spells to (ds:))
+(set: $Token to false)
+(set: $Mayor to false)
+(set: $spells to (ds:))
+(set: $items to (ds:))
+(set: $Gold to 0)
 
+
+&lt;!-- items --&gt;
+(set: $item_tide_stone to &quot;tide stone&quot;)
+(set: $item_sacred_ward to &quot;sacred_ward&quot;)
+(set:$item_dagger to &quot;dagger&quot;)
+(set:$item_crystal to &quot;crystal&quot;)
+(set:$item_sword to &quot;sword&quot;)
+
+&lt;!-- spells --&gt;
+(set: $spell_dispel to &quot;dispel&quot;)
+
+}
 Please choose a name to start your story: (input: bind $Name , &quot;Calder Faust&quot;)
-[[Start Game|ACTOneStart]]</tw-passagedata><tw-passagedata pid="28" name="StrDream" tags="" position="1275,750" size="100,100">(set: $INT to it + 0)
-(set: $STR to it + 2)
-(set: $AGI to it + 1)
-
-Ah, you finally remeber, this was your first day reporting to the academy to further your education as a knight. You can still recall the stern face of your instructor Edward, a decorated knight who decided to pass on what he learned to the younger generation before starting his next adventure. He was always your favorite, strict but caring as he guided the battalion of idiots he was tasked with training. 
-
-Reminiscing about the past, you remember as you left home. Your parents were so proud of you after you won the [[sparing contest|StrDreamStr]] at the nearby town, though you decided not to tell them how you got the qualification to even participate. Finding a reputable [[forger|StrDreamAgi]] was a difficult task, as you were from a small family in the countryside and did not have any connections in town. It took quite the effort to [[research|StrDreamInt]] what papers you would even need for the contest, as it was not really advertiseed outside of town.</tw-passagedata><tw-passagedata pid="29" name="StrDreamAgi" tags="" position="1200,875" size="100,100">(set: $INT to it + 0)
-(set: $STR to it + 1)
-(set: $AGI to it + 2)
-(set: $Class to &quot;Knight&quot;)
-
-You can still feel how sore your feet felt after finally finding Wraith down in the sewers beneath the town hall. To this day you still only know him by his codename, and it was only by luck that you asked the right begger during your search. Ralph took pity on you seeing how badly your search was going, and pointed you towards the first real clue, finally setting you on the correct path.
-
-Since you had no money to pay for the documents, you still owe Wraith a favor for setting you up with everything you needed. It doesn&#39;t even bother you much after ater finding out that even the Rogues&#39; Abode is an accepted part of the royal families assets. 
-
-The chirping of seagulls startles you from the recollections, hinting that you shall soon be making [[landfall|DreamEnd]] on the island.</tw-passagedata><tw-passagedata pid="30" name="StrDreamInt" tags="" position="1400,875" size="100,100">(set: $INT to it + 2)
-(set: $STR to it + 1)
-(set: $AGI to it + 0)
-(set: $Class to &quot;Knight&quot;)
-
-Looking for information was hard, and sokewhat alien to you, as the village elders only taught you the basics of reading before decing you were better off just helping your parents around the farm. You spent all your free time in the library looking for records of previous tournaments, which while helpful with advancing your research skills didn&#39;t lead to success. 
-
-Just when you were ready to give up the kind elderly librarian finally had enough of you running around his quiet sanctum, and asked what you were looking for. To this day you still blush whenever you remember the patronizing look on her face as the small fae points out that the rules are already posted all around the venue, and should include all prerequisites needed to participate
-
-The chirping of seagulls startles you from the recollections, hinting that you shall soon be making [[landfall|DreamEnd]] on the island.</tw-passagedata><tw-passagedata pid="31" name="StrDreamStr" tags="" position="1300,875" size="100,100">(set: $INT to it + 0)
-(set: $STR to it + 2)
-(set: $AGI to it + 1)
-(set: $Class to &quot;Knight&quot;)
-
-You can still remember the sheer joy when the knight at the scene accepted your documents without any hassle. Looking back it was probably either part of the test for the less fortunate, or they simple didn&#39;t care that one more competitor was added to the tournament. It seems impossible that he failed to recognise the forgery.
-
-Each round was difficult and exhausting, but with the body forged by working on the farm and the agility given from roaming the mountains you successfully advanced all the way to the finals. You can admit that some luck was definitely involved, as some of your greatest foes tiredd eachother out before reaching you, but that was just part of the contest. While winning wasn&#39;t needed to be accepted into the academy, first place secured you a scholarship that helped you afford the 5 year training.
-
-The chirping of seagulls startles you from the recollections, hinting that you shall soon be making [[landfall|DreamEnd]] on the island.</tw-passagedata><tw-passagedata pid="32" name="Temple entrance" tags="" position="1000,2350" size="100,100">Describe temple, describe carving and statues, feeling around the entrance. Edward returns if he was with us
-
-[[Enter the Temple|Entry hall]]</tw-passagedata><tw-passagedata pid="33" name="Tip room" tags="" position="1400,2975" size="100,100">&lt;!--General idea: In this room sits some kind of humanlike creature, which seems like an enemy at first. With enough STR, you can overcome it easily, but with enough INT or AGI, you can actually &quot;befriend&quot; the creature and get information about the puzzles in the dungeon (pond, puzzle room, idol puzzle or well) from it. Could function as some help if the player does not know how to proceed.--&gt;
-
-Insert encounter with creature
-
-Choose between different paths for STR and INT/AGI.
-Make boolean variable to keep track if the creature is alive in the first place.
-
-&lt;!--Make it possible such that you can also enter the room from behind, i.e. coming from the idol puzzle.--&gt;
-
-[[Idol room]]</tw-passagedata><tw-passagedata pid="34" name="Token" tags="" position="1000,1550" size="100,100">description of toen, can have edward help during trip
-(set:$Token to true)
-[[Thank you, this will come in handy|IntroEdward]]</tw-passagedata><tw-passagedata pid="35" name="Town Hall" tags="" position="975,1950" size="100,100">(if:$Intro is true)[You can hear Selene giving a small explanation of who you are and asking about the mayor. It seems there are no problems and the mayor is in his office. [[The Guards wave you through before you can even join the conversation|Mayor Meeting]]]
-(if:$Intro is false)[[Introduction]]</tw-passagedata><tw-passagedata pid="36" name="TownCenter" tags="" position="975,1800" size="100,100">As you follow Selene, you look around the town. The dock area seems to be mostly finished, with a main road lead towards the center of town. On the sides there are mostly half finished construction sites and mostly empty fields, probably left alon until larger industry is present to leave room for them to expand around the port.
-
-The closer you get to what you can only presume is the town center the more buildings there are that look entirely finished and occupied. The buildings seem to be a mixture of rocks and wood, something common for new frontier settlements that have no access to lerge quarries or traderoutes. 
-
-The only exception seems to be the large stone building you are approaching, which while not the size of what mayor offices look in well developed settlements, is still magnificent. The more you look at it you can see the characteristics of it being a defensive fort as well. Most new settlements lack the walls needed to keep out bandits or larger wildlife, so while thos are built the Mayor&#39;s office serves as a bastion to protect the early settlers in any conflicts or raids that might happen.
-
-Your musing is broken as Selene addresses the guards at the [[entrance|Town Hall]].</tw-passagedata><tw-passagedata pid="37" name="Trap corridor" tags="" position="1400,2850" size="100,100">&lt;!--Room with holes in the walls. On the floor there are trip ropes that, if triggered, let arrows shoot out of the holes. Again an agi hazard.--&gt;
-
-As you continue your expedition, you find yourself going through a barely lit corridor. You make one step after another, only seeing blurry images of the floor.
-
-(set:$AGI to 4)
-
-(if:$AGI &gt;= 4)[You cannot put it into words, but something feels off for you about this room. You start inspecting the walls and notice some strange holes on both sides. Further following your gut, you start looking at the floor.
-It seems like you had the right feeling. What you find are trip ropes. Luckily, you think, as they are probably connected to some mechanism. Surely, you do not want to find out, what those ropes activate, which is why you make big steps over them and reach another door.]
-
-&lt;!--Add here if clause where the player can proceed with the dungeon if he has enoug agi, else he dies (?) and restarts at the entry hall--&gt;
-[[This time you cannot hear anything suspicious from the other side, which is why you take the risk and enter the room|Tip room]]</tw-passagedata><tw-passagedata pid="38" name="agi enemy room" tags="" position="1400,2725" size="100,100">&lt;!--Enemy encounter designed for agi character. Monster is sleeping (?), but with enough agi skill it can be passed without waking it up.--&gt;
-&lt;!--Maybe add methods for other classes as well.--&gt;
-
-&lt;!--insert interaction with monster.--&gt;
-&lt;!--first option is to sneak around it, requires certain agi stat--&gt;
-&lt;!--if player tries to sneak and does not have the required stat -&gt; death--&gt;
-&lt;!--maybe give options for players with some other really high skill, maybe it could be possibel to kill the monster--&gt;
-
-DEBUGGING
-(set:$AGI to 2)
-
-(if:$AGI &gt;= 3)[[Sneak around the monster succesfully|Trap corridor]]
-(if:$AGI &lt; 3)[(set:$DeathCounter to $DeathCounter + 1)]
-(if:$AGI &lt; 3)[(set:$Insanity to $Insanity + 1)]
-(if:$AGI &lt; 3)[[Sneak around the monster and get caught|Entry hall]]</tw-passagedata><tw-passagedata pid="39" name="agi path" tags="" position="1400,2600" size="100,100">&lt;!--short notice that player chose path to the agi enemy encounter--&gt;
-&lt;!--Next entering the room with the sleeping monster in it.--&gt;
-
-The snoring gets even louder as you wander through a steadily darker getting corridor. You reach a small door made of half-rot wood. What do you want to do?
-
-[[You are not really sure if you want to find out, what hides behind those snores and return to the main hall.|Entry hall]]
-[[You enter the room and cannot believe your eyes.|agi enemy room]]</tw-passagedata><tw-passagedata pid="40" name="after illusion wall" tags="" position="500,3225" size="100,100">[[puzzle int]]</tw-passagedata><tw-passagedata pid="41" name="front illusion wall" tags="" position="500,3100" size="100,100">[[after illusion wall]]</tw-passagedata><tw-passagedata pid="42" name="info path 2" tags="" position="700,2725" size="100,100">After going along the path for a quick while, you arrive in front of a locked door.
-
-(link:&quot;Look around&quot;)[(show:?detect_scale)]
-|detect_scale)[In front of the locked door, you]
+[[Start Game|ACTOneStart]]</tw-passagedata><tw-passagedata pid="53" name="ScanAntechamber" tags="" position="800,3725" size="100,100">You take a moment to survey the antechamber more thoroughly.
+*   The **skull pillars** are unnervingly detailed, each skull facing slightly differently, as if watching. There&#39;s no obvious mechanism on them.
+*   The **statues of soldiers** and **gods** long forgotten, stand ominously before you.
+*   The **stone walls** are mostly solid, hewn brickwork mixed with natural rock.
 
 
-|cont_2)[&#39;&#39;You:&#39;&#39; But how can we then even detect them, when they are lifelike?
-(link:&quot;Continue&quot;)[(show:?cont_3)]]
-|cont_3)[&#39;&#39;Prof. Orlen Voss:&#39;&#39; Ahh good question, $Name, first of all they produce a slight shimmer, and if you&#39;re still unsure you can try dispelling it. If it&#39;s an illusionary wall, it will turn invisible for a few seconds.
-(link:&quot;Continue&quot;)[(show:?cont_4)]]
+The green smoke remains the most prominent feature, clearly guarding the way to the idol.
+
+[[Focus again on the smoke|BeforeIdolRoom]]</tw-passagedata><tw-passagedata pid="54" name="SearchForCushion" tags="" position="600,2950" size="100,100">You scan the area at the tunnel&#39;s edge, desperately hoping for something – anything – that could soften your landing. Perhaps some old sacking, a pile of debris, or even a conveniently placed pile of moss.
 
 
-[[Go along path|int path drop down]]
-[[Return to the shimmering wall|int path 1]]</tw-passagedata><tw-passagedata pid="43" name="int path 1" tags="" position="700,2600" size="100,100">You notice the slight shimmer of the wall, and remember your professors often talked about illusioniary wall.
+Alas, the temple&#39;s builders, or perhaps time itself, have left this passage starkly bare. The floor is cold, hard stone, littered with nothing more than fine dust and a few loose pebbles that would offer no comfort whatsoever. The walls are equally unyielding. There&#39;s nothing here to aid your descent.
+
+
+The ten-foot drop remains as daunting as before.
+
+[[Attempt to climb down carefully anyway|ClimbDown]]
+[[Risk a direct jump|JumpDown]]</tw-passagedata><tw-passagedata pid="55" name="StrDream" tags="" position="1275,750" size="100,100">{(set: $INT to it + 0)(set: $STR to it + 2)(set: $AGI to it + 1)
+}Ah, you finally remember, this was your first day reporting to the academy to further your education as a knight. You can still recall the stern face of your instructor Edward, a decorated knight who decided to pass on what he learned to the younger generation before starting his next adventure. He was always your favorite, strict but caring as he guided the battalion of idiots he was tasked with training. 
+
+Reminiscing about the past, you remember as you left home. Your parents were so proud of you after you won the [[sparing contest|StrDreamStr]] at the nearby town, though you decided not to tell them how you got the qualification to even participate. Finding a reputable [[forger|StrDreamAgi]] was a difficult task, as you were from a small family in the countryside and did not have any connections in town. It took quite the effort to [[research|StrDreamInt]] what papers you would even need for the contest, as it was not really advertised outside of town.</tw-passagedata><tw-passagedata pid="56" name="StrDreamAgi" tags="" position="1200,875" size="100,100">{(set: $INT to it + 0)(set: $STR to it + 1)(set: $AGI to it + 2)(set: $Class to &quot;Knight&quot;)
+}You can still feel how sore your feet felt after finally finding Wraith down in the sewers beneath the town hall. To this day you still only know him by his codename, and it was only by luck that you asked the right begger during your search. Ralph took pity on you, seeing how badly your search was going, and pointed you towards the first real clue, finally setting you on the correct path.
+
+Since you had no money to pay for the documents, you still owe Wraith a favor for setting you up with everything you needed. It doesn&#39;t even bother you much after finding out that even the Rogues&#39; Abode is an accepted part of the royal family&#39;s assets. 
+
+The chirping of seagulls startles you from the recollections, hinting that you shall soon be making [[landfall|DreamEnd]] on the island.</tw-passagedata><tw-passagedata pid="57" name="StrDreamInt" tags="" position="1400,875" size="100,100">{(set: $INT to it + 2)(set: $STR to it + 1)(set: $AGI to it + 0)(set: $Class to &quot;Knight&quot;)
+}Looking for information was hard, and somewhat alien to you, as the village elders only taught you the basics of reading before deciding, you were better off just helping your parents around the farm. You spent all your free time in the library looking for records of previous tournaments, which while helpful with advancing your research skills weren&#39;t very successful.
+
+Just when you were ready to give up, the kind elderly librarian finally had enough of you running around his quiet sanctum, and asked what you were looking for. To this day you still blush whenever you remember the patronizing look on her face as the small fae points out that the rules are already posted all around the venue, and should include all prerequisites needed to participate.
+
+The chirping of seagulls startles you from the recollections, hinting that you shall soon be making [[landfall|DreamEnd]] on the island.</tw-passagedata><tw-passagedata pid="58" name="StrDreamStr" tags="" position="1300,875" size="100,100">{(set: $INT to it + 0)(set: $STR to it + 2)(set: $AGI to it + 1)(set: $Class to &quot;Knight&quot;)
+}You can still remember the sheer joy when the knight at the scene accepted your documents without any hassle. Looking back it was probably either part of the test for the less fortunate, or they simply didn&#39;t care that one more competitor was added to the tournament. It seems impossible that he failed to recognise the forgery.
+
+Each round was difficult and exhausting, but with the body forged by working on the farm and the agility given from roaming the mountains you successfully advanced all the way to the finals. You can admit that some luck was definitely involved, as some of your greatest foes tired eachother out before reaching you, but that was just part of the contest. While winning wasn&#39;t needed to be accepted into the academy, first place secured you a scholarship that helped you afford the 5-year long training.
+
+The chirping of seagulls startles you from the recollections, hinting that you shall soon be making [[landfall|DreamEnd]] on the island.</tw-passagedata><tw-passagedata pid="59" name="StudyIllusion" tags="" position="675,3175" size="100,100">You spend some time carefully observing the wall, looking for any seams, unusual markings, or pressure plates. You trace the edges where the illusory rock meets the real tunnel walls. While the illusion is expertly crafted, you notice that the subtle hum seems to emanate more strongly from a particular point near the center.
+
+(link-reveal:&quot;Study Carefully&quot;)[
+
+Your study doesn&#39;t reveal a physical way through, but it reinforces your conviction that this is magical. Perhaps a direct magical counter is needed, or a specific trigger you haven&#39;t found.
+
+[[Reconsider your approach|LowerTunnelExplore]]
+]</tw-passagedata><tw-passagedata pid="60" name="Temple entrance" tags="" position="1000,2350" size="100,100">{
+(set: $B_INT to $INT )
+(set: $B_STR to $STR )
+(set: $B_AGI to $AGI )
+(set: $B_Name to $Name)
+(set: $B_Class to $Class)
+(set: $B_spells to $spells)
+(set: $B_items to $items)
+(set: $B_Gold to $Gold)
+(set: $well to false)
+
+}
+&lt;img src=&quot;https://daniel-pfeffer.github.io/images/dungeon_entry.jpg&quot;  class=&quot;story-image&quot;&gt;Before you looms the temple entrance, a gaping maw in the dense jungle wall. Centuries of wind and rain have scoured the heavy stone blocks, yet the intricate carvings, though softened and blurred, still speak of a forgotten age and potent, unsettling powers.
+
+Flanking the immense, shadow-filled doorway stand two colossal **statues**, perhaps fifteen feet tall. Carved from a dark, veined stone that seems to drink the light, they depict grotesque, vaguely humanoid figures. Their forms are a disturbing fusion of man and sea beast: limbs ending in suckered tentacles, faces with wide, unblinking fish-like eyes, and gaping maws filled with needle-sharp teeth. Moss and creeping vines cling to them like tattered shrouds, and one has lost an arm, the jagged break a stark wound against its ancient form. They are guardians, not welcoming sentinels.
+
+The **archway itself** is a masterpiece of relief carving, though heavily eroded. You can make out scenes of storms at sea, colossal waves overwhelming ships, and shadowy figures – perhaps priests or deities – making offerings to monstrous entities rising from churning waters. Interspersed are stylized depictions of kraken, coiling serpents, and other unidentifiable abyssal creatures. A recurring motif is a many-pointed star, its meaning lost to time but radiating a sense of cold, distant power. The air around the entrance is noticeably colder, carrying a faint, briny scent mixed with the dry odor of ancient dust and something else… a subtle, almost imperceptible hum that resonates deep in your chest, hinting at the dormant energies within.
+
+[[Enter the Temple|Entry hall]]</tw-passagedata><tw-passagedata pid="61" name="TideStonePuzzleChamber" tags="" position="1500,2375" size="100,100">{
+(if: $startup is true or $pillar1Symbol is 0)[(set: $pillar1Symbol to 0)]
+(if: $startup is true or $pillar2Symbol is 0)[(set: $pillar2Symbol to 0)]
+(if: $startup is true or $pillar3Symbol is 0)[(set: $pillar3Symbol to 0)]
+(set: $pillarSymbols to (a: &quot;Wave&quot;, &quot;Moon&quot;, &quot;Kraken&quot;, &quot;Trident&quot;))
+
+(if: $startup is true or $tideStoneRetrieved is 0)[(set: $tideStoneRetrieved to false)]
+
+}&lt;img src=&quot;https://daniel-pfeffer.github.io/images/dungeon_puzzle-item.jpg&quot;  class=&quot;story-image&quot;&gt;The chamber is quiet save for the dripping water. The Tide Stone pulses invitingly from the central pool.
+
+
+**The Pillars:**
+
+|pillarDisplays&gt;[{
+(set:_p1 to $pillarSymbols&#39;s ($pillar1Symbol+1))
+(set:_p2 to $pillarSymbols&#39;s ($pillar2Symbol+1))
+(set:_p3 to $pillarSymbols&#39;s ($pillar3Symbol+1))
+}
+Pillar 1 (Left): Currently shows **_p1**.
+Pillar 2 (Center): Currently shows **_p2**.
+Pillar 3 (Right): Currently shows **_p3**.
+]
+
+(link-repeat: &quot;Rotate Pillar 1&quot;)[{
+ (set: _nextIndex to ($pillar1Symbol + 1) % $pillarSymbols&#39;s length)
+ (set: $pillar1Symbol to _nextIndex)
+ (rerun: ?pillarDisplays)
+} ]
+
+
+(link-repeat: &quot;Rotate Pillar 2&quot;)[{
+ (set: _nextIndex to ($pillar2Symbol + 1) % $pillarSymbols&#39;s length)
+ (set: $pillar2Symbol to _nextIndex)
+ (rerun: ?pillarDisplays)
+} ]
+
+
+(link-repeat: &quot;Rotate Pillar 3&quot;)[{
+ (set: _nextIndex to ($pillar3Symbol + 1) % $pillarSymbols&#39;s length)
+ (set: $pillar3Symbol to _nextIndex)
+ (rerun: ?pillarDisplays)
+} ]
+
+
+
+**Other Actions:**
+
+[[Examine the Murals for clues|ExamineTideMurals]]
+[[Examine the Central Pool and Tide Stone|ExamineTidePool]]
+[[Look for an activation mechanism|FindActivationLevelTide]]
+(if: $tideStoneRetrieved is false and $foundActivationLever is true)[
+    [[Pull the Lever|ActivateTidePuzzle]]
+]
+(if: $tideStoneRetrieved is true)[
+    You possess the Tide Stone.
+    [[Leave the chamber|ExitTideChamber]]
+]
+[[Return to previous area|PassageBeforeTideStone]]</tw-passagedata><tw-passagedata pid="62" name="Tip room" tags="" position="1375,3200" size="100,100">{
+&lt;!--General idea: In this room sits some kind of humanlike creature, which seems like an enemy at first. With enough STR, you can overcome it easily, but with enough INT or AGI, you can actually &quot;befriend&quot; the creature and get information about how to reach the Idol from it. Could function as some help if the player does not know how to proceed.--&gt;
+&lt;!--DUBUGGING--&gt;
+}Inspecting the room, you cannot make out many interesting things. But as you continue to look around while approaching the middle of the room are two glowing spots in a corner.
+&quot;Who are you to disturb the silence in these ruins?&quot;, a croaking voice coming from said spots exclaims. The creature moves into the light and you can make out a humanlike figure with fur all over its body. It looks at you with infuriated eyes.
+{(if:$STR &gt;= 2)[
+You feel intimidated by this creature, and knowing the obstacles that you already have left behind you, you make a leap forward and try to knock it out. You quickly overwhelm the old weak creature and make your way to the door you spot on the other side of the room. For a short moment you overthink your decision, feeling that the creature might not have had bad intentions, before you [[enter the next room behind the door|BeforeIdolRoom]].
+](else:)[
+If you were stronger, you would try to attack it, but as you do not know yet its intentions, you try to find out, what the creature wants: &quot;Who wants to know that?&quot;
+The creature utters a rattling laugther. &quot;Well I have been here for longer than you can imagine. My name and where I come from, I cannot remember such things anymore. Tell me, why are you venturing here?&quot;&lt;br&gt;
+&quot;I was sent to retrieve the Idol that is located in the depths of these ruins. You know where I can find them?&quot;&lt;br&gt;
+Another rattling laughter. &quot;There are very few things I do not know about these ruins, my friend. About the Idol itself, you are no longer than a few meters away from it, you would just have to leave through this door. But let me tell you this: You won&#39;t be able to reach it, unless you are prepared. There exists a special key. Without that, all your efforts will be for nothing.&quot;&lt;br&gt;
+	(if: $items contains $item_sacred_ward)[
+    &quot;You mean this?&quot;, you ask as you show it the ward you found earlier.&lt;br&gt;
+    The eyes of the creature start to glow even brighter. &quot;So you are the chosen one to retrieve the Idol. In this case, there is nothing more I have or dare to tell you, please proceed, as you are destined to.&quot;, it says as it is pointing towards the door. With an acknowledging nod you pass the creature and [[walk through the door|BeforeIdolRoom]].
+    ](else:)[
+    Rather confused by what it means, you ask: &quot;What do you mean by &#39;key&#39;?&quot;&lt;br&gt;
+    &quot;Near the entrance of the temple, those who hid the Idol eons ago hid the only item that could grant you access to the chamber where the Idol is located. But they didn&#39;t just hide it, they locked it behind some mechanism, only the chosen one is meant to solve. I will let you pass this door, but be aware that the Idol can only be reached when in the possession of the item.&quot;
+    It points at another wooden door at the end of the room. Still thinking about what it said, you pass the creature and [[continue your way through the ruins|BeforeIdolRoom]].
+    ]
+]}</tw-passagedata><tw-passagedata pid="63" name="Town Hall" tags="" position="975,1950" size="100,100">(if:$Intro is true)[You can hear Selene giving a small explanation of who you are and asking about the mayor. It seems there are no problems and the mayor is in his office. [[The Guards wave you through before you can even join the conversation|Mayor Meeting]].]
+(if:$Intro is false)[Seeing you approaching alone, the guards stop you and ask for an [[introduction|Introduction]].]</tw-passagedata><tw-passagedata pid="64" name="TownCenter" tags="" position="925,1650" size="100,100">As you follow Selene, you look around the town. The dock area seems to be mostly finished, with a main road leading towards the center of town. On the sides there are mostly half finished construction sites and mostly empty fields, probably left alone until larger industry is present to leave room for them to expand around the port.
+
+The closer you get to what you can only assume is the town center the more buildings there are that look entirely finished and occupied. The buildings seem to be a mixture of rocks and wood, something common for new frontier settlements that have no access to large quarries or traderoutes. 
+
+The only exception seems to be the large stone building you are approaching, which, while not the size of what mayor offices look in well developed settlements, is still magnificent. The more you look at it you can see the characteristics of it being a defensive fort as well. Most new settlements lack the walls needed to keep out bandits or larger wildlife, so while those are built the Mayor&#39;s office serves as a bastion to protect the early settlers in any conflicts or raids that might happen.
+
+Your musing is broken as Selene addresses the guards at the [[entrance|Town Hall]].</tw-passagedata><tw-passagedata pid="65" name="Trap corridor fail" tags="" position="1475,2975" size="100,100">{
+&lt;!--Player reaches corridor, but doesn&#39;t notice the arrow trap. The player dies and resets in the Entry Hall--&gt;
+}Still in shock and completely out of breath, you now find yourself in a almost entirely dark corridor. You still hear the rumbling of the now quite enraged beast behind you, urging you to continue your way.
+As you set your next step, you hear a rope snapping and some mechanism activating. Faster than you can react, you feel a peeling pain in your left arm. Quickly looking for the cause, you see an arrow piercing your forearm. But luckily the pain vanishes quite fast, but with the consequence of your entire arm now being numb.
+Not only that: The numbness seems to spread over your entire body. You try to sit down, but end up tripping and falling down on the floor, with your legs now completely senseless. It does not take long for your sight to fade as well, before you fall in a deep slumber...
+
+
+[[Continue|Entry hall after death]]</tw-passagedata><tw-passagedata pid="66" name="Trap corridor success" tags="" position="1325,2975" size="100,100">{
+&lt;!--Room with holes in the walls. On the floor there are trip ropes that, if triggered, let arrows shoot out of the holes. Again an agi hazard.--&gt;
+}As you continue your expedition, you find yourself going through a barely lit corridor. You make one step after another, only seeing blurry images of the floor.
+You cannot put it into words, but something feels off for you about this room. You start inspecting the walls and notice some strange holes on both sides. Further following your gut, you start looking at the floor.
+It seems like you had the right feeling. What you find are trip ropes. Luckily, you think, as they are probably connected to some mechanism. Surely, you do not want to find out, what those ropes activate, which is why you make big steps over them.
+After passing several traps, you finally seem to have passed all of them. You are now at the end of the dark corridor, standing in front of another wooden door.
+This time you cannot hear anything suspicious from the other side, which is why you [[take the risk and enter the room|Tip room]].</tw-passagedata><tw-passagedata pid="67" name="UseDispelItem" tags="" position="500,3400" size="100,100">You take out your Tide Stone. As you direct it towards the suspicious wall, it begins to glow faintly and seems to connect with the wall.
+
+The shimmering surface of the wall ripples violently under the item&#39;s influence. With a soft sigh, like air escaping a pricked bladder, the illusion dissolves. Where solid rock seemed to be, an open archway leading into further darkness now stands.
+(set: $illusionWallDispelled to true)
+
+
+[[Step through the revealed archway|after illusion wall]]</tw-passagedata><tw-passagedata pid="68" name="UseWardOnSmoke" tags="" position="975,3775" size="100,100">You draw forth your Sacred Ward. As you present it towards the billowing emerald barrier, 
+The Ward in you hands begins to hum slowly and emit a soft, golden light.
+
+
+The golden light meets the green smoke. There&#39;s a sound like rushing wind, and the acrid smell intensifies for a moment before rapidly dissipating. The emerald miasma churns violently, then, as if an unseen hand has drawn curtains aside, it parts down the middle, creating a clear, stable corridor through the archway. The way to the Idol is open! The residual energy from the Ward fades, but the path remains.
+(set: $greenSmokeDispelled to true)
+
+[[Proceed into the Idol&#39;s sanctum|Idol room]]</tw-passagedata><tw-passagedata pid="69" name="after illusion wall" tags="" position="325,3575" size="100,100">&lt;img src=&quot;https://daniel-pfeffer.github.io/images/dungeon_illusion2_cleared.jpg&quot;  class=&quot;story-image&quot;&gt;The air beyond the former illusion is stale, heavy with the scent of long-undisturbed dust and a faint, almost metallic tang that prickles at the back of your throat. The passage itself seems subtly different here; the stonework is smoother, more deliberate, than the rough-hewn tunnels before. It continues onward, but your attention is caught by a //slight, ethereal shimmer// that seems to cling to the air a short distance ahead, like heat haze on a cold day, though there&#39;s no warmth here. It distorts the view of the passage beyond it, making the far end waver and ripple.
+
+
+A low, almost sub-audible hum seems to emanate from that direction, a vibration you feel more in your bones than hear with your ears.
+
+(link-reveal:&quot;Follow the shimmer and the faint hum&quot;)[
+    Drawn by the subtle distortion and the strange resonance, you proceed cautiously. The shimmer intensifies as you approach, coalescing around what appears to be the end of this particular corridor. The air grows perceptibly colder.
+
+
+    The corridor then opens abruptly, not into another narrow passage, but into a grand, if somewhat foreboding, antechamber. The change in atmosphere is immediate and striking. The air here is significantly cooler, thick with the intermingled scents of damp, ancient stone, the lingering ghost of burnt incense, and that same sharp, acrid tang you noticed earlier, now much stronger. It bites at your nostrils, hinting at potent energies or strange substances.
+
+
+    [[Step fully into the antechamber and take in the view|BeforeIdolRoom]]
+]</tw-passagedata><tw-passagedata pid="70" name="agi enemy room" tags="" position="1400,2725" size="100,100">{
+&lt;!--Enemy encounter designed for agi character. Monster is sleeping, but with enough agi skill it can be passed without waking it up.--&gt;
+&lt;!--Else the monster is woken up, but player escapes--&gt;
+
+&lt;!--DEBUGGING--&gt;
+}You enter a dark hall, only lit by few torches in the corners. As your eyes adapt to the darkness, you can make out a silhoutte at the other end of the room. (if:$AGI &lt; 3)[You try to slowly close the door, but the creeking of the old hinges make the snoring noises stop for a moment.] You now see the source of the now very loud snores: A giant beast lying in the hallway. Luckily for you, it appears to be asleep. Quickly you search for another door in the room to continue, but what you find makes your troubles even heavier: The only door going further is located right behind the beast. (if:$AGI &lt; 3)[Reopening the door now seems too risky, as the hinges could wake up the beast. You see your only chance in [[trying to sneak around the beast|agi enemy room fail]].](else:)[Confident in your sneaking abilities, you do not hesitate in [[trying to sneak around the beast|agi enemy room success]].]</tw-passagedata><tw-passagedata pid="71" name="agi enemy room fail" tags="" position="1325,2850" size="100,100">{
+&lt;!--Player does not get caught by beast and escapes easily--&gt;
+}You slowly make your way to the door, taking every step with great caution. As you pass the beast you notice big chains lying on the floor. Apparently this monster is being held captive here in order to scare off adventurers. You make an especially careful step over the chains and finally you reach an again rotten wooden door. Entering the room behind it without making the slightest noise, you can [[continue to explore this dungeon|Trap corridor success]].</tw-passagedata><tw-passagedata pid="72" name="agi enemy room success" tags="" position="1475,2850" size="100,100">{
+&lt;!--Path where sneaking around beast does not work out, but the player escapes--&gt;
+
+&lt;!--DUBUGGING--&gt;
+}You cautiously set one step after another. As you pass the monster, you can take a closer look at it, noticing it is covered with thick fur, horns and spikes. &quot;This monster could eat me in one bite&quot;, you think, as you slowly approach the wooden door. Then, only 10 more meters away from the exit, you suddenly trip over a large metallic chain. The snoring quickly stops and the beast starts moving and searching for the source of the disturbance of its sleep. Fearing its reaction, you start running towards the door before it can spot you. (if:$STR &gt;= 3)[Taking full charge, you run into the door and slam it, with the rot wood not withstanding your power.](else:)[You reach the door and pull the handle as strongly as you can. With the grumbling getting louder behind you, you finally manage to open the door. As soon as you went through, you shut it again.] Fairly exhausted from your encounter, [[you continue your journey|Trap corridor fail]], now with no way back.</tw-passagedata><tw-passagedata pid="73" name="agi path" tags="" position="1400,2600" size="100,100">{
+&lt;!--Player now in corridor towards agi enemy encounter--&gt;
+&lt;!--Player has possibility of going back--&gt;
+}The snoring gets even louder as you wander through a steadily darker getting corridor. You reach a small door made of half-rotten wood. On one hand, you think about your [[possibility to just go back to the main hall|Entry hall]], as the grumbling noises from behind the door seem very scary. But then you retake faith into your skills, and [[reach for the rusty handle|agi enemy room]], of which you are quite surprised it still functions properly.</tw-passagedata><tw-passagedata pid="74" name="front illusion wall" tags="" position="850,3425" size="100,100">[[after illusion wall]]</tw-passagedata><tw-passagedata pid="75" name="int path 1" tags="" position="700,2600" size="100,100">&lt;img src=&quot;https://daniel-pfeffer.github.io/images/dungeon_illusion1.jpg&quot;  class=&quot;story-image&quot;&gt;You notice the slight shimmer of the wall, and remember your professors often talked about illusioniary wall.
+
 {
 	(if:$spells is 0)[(set:$spells to (ds:))]
-	(event: when $spells contains &quot;dispell&quot;)[(show:?before_dispell)]
-	(if:$spells does not contain &quot;dispell&quot;)[
+	(event: when $spells contains $spell_dispel)[(show:?before_dispell)]
+	(if:$spells does not contain $spell_dispel)[
     	(link:&quot;Try to remember the details&quot;)[(show:?cont_1)]
     ]
 }
@@ -291,19 +867,194 @@ The snoring gets even louder as you wander through a steadily darker getting cor
 |before_dispell)[As you remember how to detect and dispel an illusionary wall, all you have to do now, is to well dispell it.
 (link:&quot;//Dispell//&quot;)[(show:?after_dispell)]]
 |after_dispell)[{
-(set:$spells to it + (ds:&quot;dispell&quot;))
+(set:$spells to it + (ds:$spell_dispel))
 }The moment you cast //Dispell//, the wall infront of you becomes see-through and you see a path that seems to turn right after a few meters.
-[[Go along this path-&gt;info path 2]]]
-[[Go back to the middle of the room|Entry hall]]</tw-passagedata><tw-passagedata pid="44" name="int path 1 opt" tags="" position="500,2600" size="100,100">You notice a slight shimmer on this wall.
+[[Go along this path-&gt;IntPathScalePuzzle]]]
+[[Go back to the middle of the room|Entry hall]]</tw-passagedata><tw-passagedata pid="76" name="int path 1 opt" tags="" position="450,2375" size="100,100">You notice a slight shimmer on this wall.
 (if:$INT &lt; 2)[You remember how your teachers talked about shimmering moos, often found in damp caves.]
 (if:$INT is 2)[You remember how your teachers talked about magical doors, and that they often would shimmer quite similarily to this. But you cannot remember how exactly to dispell the magic.]
 
 There doesn&#39;t seem to be anything else interesting here.
-&lt;!-- Brute force to skip illusion wall? --&gt;
-(link:&quot;Run against the wall&quot;)[]
-[[Go back to the middle of the room|Entry hall]]</tw-passagedata><tw-passagedata pid="45" name="int path drop down" tags="" position="700,2850" size="100,100">[[Go along|shared path from int path]]</tw-passagedata><tw-passagedata pid="46" name="puzzle int" tags="" position="500,3350" size="100,100">[[Puzzle for door]]</tw-passagedata><tw-passagedata pid="47" name="shared path from int path" tags="" position="700,2975" size="100,100">[[front illusion wall]]</tw-passagedata><tw-passagedata pid="48" name="shared path int trap" tags="" position="300,2600" size="100,100">[[Go along the path|shared path trap]]
 
-[[Go back|Entry hall]]</tw-passagedata><tw-passagedata pid="49" name="shared path path" tags="" position="350,2900" size="100,100">[[in front of illusion|front illusion wall]]</tw-passagedata><tw-passagedata pid="50" name="shared path trap" tags="" position="300,2750" size="100,100">[[After trap go along path|shared path path]]</tw-passagedata></tw-storydata>
+[[Go back to the middle of the room|Entry hall]]</tw-passagedata><tw-passagedata pid="77" name="IntPathScalePuzzle" tags="" position="700,2725" size="100,100">{
+(set: $scaleUses to it + 0)
+(set: $left to (a:))
+(set: $right to (a:))
+(set: $balls to (a: 1,2,3,4,5,6,7))
+(set:$correctBall to (random:1,7))
+}
+&lt;img src=&quot;https://daniel-pfeffer.github.io/images/dungeon_puzzle-int.jpg&quot;  class=&quot;story-image&quot;&gt;After going along the path for a quick while, you arrive in a dimly lit chamber within the temple. \
+The air is heavy with the scent of dust and something vaguely metallic. \
+A single, heavy door blocks your path. \
+Seven identical stone spheres rest in a shallow alcove, and an old, ornate scale sits upon a stone pedestal.
+
+&lt;!-- TODO: die here --&gt;
+
+|info)[]
+
+|actions&gt;[
+  (link-repeat: &quot;Inspect the door&quot;)[(show:?insert){
+    (replace: ?info)[
+      The heavy oaken door, bound with tarnished iron, looms before you. \
+      It&#39;s cold to the touch and stubbornly resists any attempt to push it open. \
+      There&#39;s no visible keyhole or handle. \
+      Upon closer inspection, you spot a small, weathered stone tablet set into the wood, bearing a single, deeply carved sentence:
+&#39;&#39;Only the lightest sphere shall break the seal.&#39;&#39;
+    ]
+  }]
+  (link-repeat: &quot;Inspect the balls&quot;)[{
+    (replace: ?info)[
+      You gather the seven spheres. \
+      They are crafted from a cool, smooth, dark stone, perhaps obsidian or polished basalt. \
+      Each one fits comfortably in your palm. \
+      Despite your keenest observation, they are utterly indistinguishable – no blemishes, no variations in weight you can discern by hand, no unique markings. \
+      One of them, however, holds the key.
+    ]
+  }]
+  (link-repeat: &quot;Inspect the scale&quot;)[{
+    (replace: ?info)[
+      Resting on a dusty, ornate pedestal is an ancient balance scale. \
+      Its arms are crafted from a dark, pitted metal, possibly bronze, and the pans are shallow stone dishes. \
+      The whole contraption looks incredibly fragile, as if a strong breath might disturb its delicate equilibrium. \
+      Faint, almost eroded runes are carved around its base, and a more prominent inscription beneath the fulcrum reads:
+&#39;&#39;Thrice may the truth be weighed, ere the spirits claim their due.&#39;&#39;
+    ]
+  }]
+  (link-reveal: &quot;Use the scale&quot;)[{
+    (if: $scaleUses &gt; 3)[
+     (set: $scaleUses to 0)
+      (replace: ?info)[As you place the balls for a fourth time, a faint crack echoes from the scale&#39;s mechanism. With a groan of tortured metal and stone, the ancient device shatters, its pieces clattering to the floor. The pedestal crumbles, and the resulting tremor causes a section of the ceiling above you to collapse!
+  &#39;&#39;Crushed by falling debris, you have met your end in the temple&#39;s depths.&#39;&#39;]
+      (replace: ?actions)[[[Restart-&gt;Entry hall after death]]]
+    ]
+    }(else:)[{
+        (set: $left to (a:))
+        (set: $right to (a:))}
+        Select balls for the left pan (choose by number): {
+        (for: each _b, ...$balls)[
+          (link-repeat: (string: _b))[
+            (set: $left to it + (a:_b))
+            (replace: ?leftSel)[Left: (print: $left)]
+          ]
+        ]}
+        |leftSel&gt;[Left: (print: $left)]
+
+        Select balls for the right pan (choose by number): {
+        (for: each _b, ...$balls)[
+          (link-repeat: (string: _b))[
+            (set: $right to it + (a:_b))
+            (replace: ?rightSel)[Right: (print: $right)]
+          ]
+        ]}
+        |rightSel&gt;[Right: (print: $right)]
+
+        (link-repeat: &quot;Weigh&quot;)[{
+          (set: $scaleUses to $scaleUses + 1)
+          (if: $scaleUses &gt; 3)[
+          &lt;!-- Death action --&gt;
+            (replace: ?info)[As you place the balls for a fourth time, a faint crack echoes from the scale&#39;s mechanism. With a groan of tortured metal and stone, the ancient device shatters, its pieces clattering to the floor. The pedestal crumbles, and the resulting tremor causes a section of the ceiling above you to collapse!
+  &#39;&#39;Crushed by falling debris, you have met your end in the temple&#39;s depths.&#39;&#39;]
+            (replace: ?actions)[[[Restart-&gt;Entry hall after death]]]
+          ]
+         } (else:)[{
+            (set: $leftWeight to (folded: _n making _sum via _sum + 2, 0, ...$left))
+            (set:$rightWeight to (folded:_n making _sum via _sum + 2, 0, ...$right))
+            (if: ($correctBall is in $left))[ (set: $leftWeight to $leftWeight - 1) ]
+            (if: ($correctBall is in $right))[ (set: $rightWeight to $rightWeight - 1) ]
+            (replace:?leftSel)[](replace:?rightSel)[](set:$left to (a:))(set:$right to (a:))
+            (if: $leftWeight &lt; $rightWeight)[
+              (replace: ?info)[The left pan dips lower, indicating it holds the lighter sphere(s). You have used the scale (print: $scaleUses) out of 3 times.]
+            ]
+            (else-if: $leftWeight &gt; $rightWeight)[
+              (replace: ?info)[The right pan dips lower, indicating it holds the lighter sphere(s). You have used the scale (print: $scaleUses) out of 3 times.]
+            ]
+            (else:)[
+              (replace: ?info)[The pans remain perfectly balanced. The lighter sphere is not among those weighed, or you have an equal number of normal spheres on both sides. You have used the scale (print: $scaleUses) out of 3 times.]
+            ]
+            (if: $scaleUses is 3)[
+                  (append: ?info)[The scale groans ominously. It feels like it won&#39;t survive another use.]
+            ]
+          }]]]]
+
+  [|insert)[(link:&quot;Attempt to open the door with a sphere&quot;)[
+  Which sphere will you try in the door&#39;s mechanism? (Though there&#39;s no visible keyhole, perhaps one will react to the inscription.)
+  {
+  (for: each _b, ...$balls)[
+    (link:(string: _b))[(hide:?insert)
+     (if:_b is $correctBall)[
+     (replace:?info)[As you press Sphere (print: _b) against the stone tablet on the door, the carved words glow with a faint, ethereal light. With a deep rumble, the heavy door grinds open, revealing a passage beyond.[[Go on|int path drop down]]]
+     ](else:)[&lt;!--Die here--&gt;(replace:?info)[You died]]
+     ]
+     ]
+  }]]
+]
+]</tw-passagedata><tw-passagedata pid="78" name="int path drop down" tags="" position="725,2850" size="100,100">The opening before you narrows into a tunnel, its walls roughly hewn from the living rock of the temple&#39;s foundations. The air within is noticeably cooler, carrying the faint, metallic scent of damp earth and ancient stone. Your torchlight casts dancing, elongated shadows that make the passage seem to writhe and stretch endlessly into the oppressive darkness ahead.
+
+(link-reveal: &quot;Press onward into the gloom.&quot;)[
+
+    You proceed cautiously, your senses heightened. Each footstep echoes unnervingly in the confined space, a stark sound that mingles with the persistent //plink... plink... plink// of unseen water dripping from the ceiling somewhere further in. The tunnel floor begins a gentle, almost imperceptible downward slope, and you realize you&#39;ve been heading steadily deeper into the earth for some time. The silence, aside from your own sounds and the dripping, is profound.
+
+    (link-reveal: &quot;Continue deeper into the tunnel.&quot;)[
+
+        After what feels like an eternity of walking through the monotonous dark, a subtle change reaches you. A faint current of air, a little fresher and carrying a hint of distant emptiness, brushes against your face. The oppressive blackness ahead seems to thin slightly, as if a new, perhaps larger, space might be near. The dripping sound is closer now.
+
+        (link-reveal: &quot;Approach the tunnel&#39;s apparent end.&quot;)[
+
+            You finally reach what seems to be the tunnel&#39;s termination. It ends abruptly at a precipice – a sheer drop. Peering over the edge, your light illuminates the rough-cut floor of another passage directly below. You estimate the drop to be around three meters.
+
+            The lower tunnel clearly continues onward from where it meets the ground, stretching away into more impenetrable darkness, inviting and ominous in equal measure. There are no readily apparent handholds on the smooth-looking drop, nor any gentle slopes leading down. It&#39;s a straight, somewhat daunting, descent.
+
+            (link-reveal: &quot;Consider your options.&quot;)[
+
+                The stone below looks unforgiving. Landing awkwardly from that height could be painful, or worse. You&#39;ll need to decide how to proceed.
+
+                [[Attempt to climb down carefully|ClimbDown]]
+                [[Look for items to cushion the fall|SearchForCushion]]
+                [[Risk it by jumping down|JumpDown]]
+            ]
+        ]
+    ]
+]</tw-passagedata><tw-passagedata pid="79" name="opened dam transition" tags="" position="850,2725" size="100,100">As you look around the lever you can&#39;t find anything else, so you decide to just pull it. Water starts rushing down the canal as the mechanism opens up the blockage. You rush after the flow to see [[where it is headed|small well]].
+(set:$well to true)
+(set:$items to it + (ds:$item_sacred_ward))</tw-passagedata><tw-passagedata pid="80" name="shared path from int path" tags="" position="525,3100" size="100,100">{
+(if: $startup is true or $majorInjury is 0)[(set: $majorInjury to &quot;none&quot;)]
+(if: $startup is true or $minorInjury is 0)[(set: $minorInjury to &quot;none&quot;)]
+
+(set:$fromAbove to 0)
+(if:(history: where its name contains &quot;JumpDown&quot;)&#39;s length is 1)[(set:$fromAbove to 1)]
+(if:(history: where its name contains &quot;ClimbDown&quot;)&#39;s length is 1)[(set:$fromAbove to 1)]
+
+}You find yourself standing on the dusty floor of the lower tunnel. The air here is colder still, heavy with an ancient stillness. Light from your source barely penetrates the oppressive darkness that stretches ahead, and also back towards the (if:$fromAbove is 1)[base of the drop](else:)[pathway] you just navigated.
+
+
+(if: $majorInjury is not &quot;none&quot;)[
+    A wave of intense pain washes over you from your $majorInjury. Each breath is an effort, and the thought of moving sends shivers of dread down your spine. This will severely hamper your progress.
+]
+(else-if: $minorInjury is not &quot;none&quot;)[
+    You wince. Your $minorInjury makes itself known with a dull ache or a sharp sting, a constant reminder of your recent ordeal. It&#39;s manageable, but annoying.
+]
+(else-if:$fromAbove is 1)[
+    You take a moment to compose yourself, relatively unscathed from the descent.
+]
+
+The new passage beckons.
+
+[[Proceed forward into the darkness|LowerTunnelExplore]]</tw-passagedata><tw-passagedata pid="81" name="shared path int trap" tags="" position="300,2600" size="100,100">You choose the Northern passage. The tunnel immediately begins a noticeable descent, the stonework more rugged and seemingly older than other sections of the temple. The air is cool and carries a strong earthy scent, mingled with the faint, metallic tang of unseen mineral deposits. The only sound is the echo of your own footsteps and the distant, rhythmic drip of water.
+
+
+[[Proceed deeper into the Northern tunnel|NotherPathCorridorWithTrap]]</tw-passagedata><tw-passagedata pid="82" name="small well" tags="" position="975,2750" size="100,100">(if:$well is false)[
+Deciding to examine the well up close you can see a channel engraved into the floor,  leading into a small hole in the side of the well. Looking over the top you can see small kneeling motifs engraved all over it. They seem to be praying around a small lake with multiple people in it.(if:$Class is &quot;Mage&quot;)[The small people seem to be slaves drawing water from the pond in small pails. It looks to be a ritual of some kind, though the details escape you.]
+
+The well is dark, but as you drop a pebble into it you can hear a ping of it hitting the bottom soon after. Looking around you cant see water anywhere, so either the channels dried out, or something blocked them. You would need to [[look around|Entry hall]] to see if you could find the blockage in that case.
+
+(if:(history: where its name contains &quot;IntDream&quot;)&#39;s length &gt;= 1)[You also have the option of [[using magic to fill it|well death]], though looking at the ritual markings it might better to look for the intended source first.]]
+(if:$well is true)[
+Rushing back and foillowing the flow of water you can see it start entering the well. Getting closer you can hear the gurgling of wwater as it falls into the previously empty hole. Once it is filled suddenly sspoariks start appearing all around the rim. You take a few steps back, but nothing seems to be happening.
+
+The sparks fade after a while, and the rooms becomes quiet once again. After another examination you see that the engravings changed, with the lakes being replaced by what looks like the idol that has been appearing in everyone&#39;s nightmares. Additionally, a small branch swims in the middle of the well, and you decide to pick it up, as it could become useful later on. You finally take a step back and seeintg as nothing else is changing, and continue with your [[exploration|Entry hall]]
+]</tw-passagedata><tw-passagedata pid="83" name="well death" tags="" position="1050,2900" size="100,100">You decide to try and fill the well with a water condensation spell, seeing as there are no other people that could help in a ritual. As the water enters tha well red sparks start appearing all over the engraving, with the lakes starting to glow an ominous crimson.
+
+You could still [[stop|Entry hall]] and return to look around some more, though the well is almost full. Might as well just (link-reveal:&quot;finish the job now.&quot;)[As the sparks increase in intensity you find yourself unable to stop the spell. Your magical reserves start dropping drastically, and you start losing you consciousness amid intense pain. (click-goto:?page,&quot;Entry hall after death&quot;)]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
